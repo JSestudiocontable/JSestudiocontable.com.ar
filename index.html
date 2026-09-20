@@ -1,59 +1,769 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es-AR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>JS Estudio Contable | Janet Marysol Saldivia</title>
-<meta name="description" content="Contadora Pública Nacional. Monotributo, ARCA, impuestos, sueldos, sociedades y asesoramiento contable. Atención en El Calafate y online en todo el país.">
+
+<meta name="description" content="Estudio contable online. Asesoramiento impositivo y contable para emprendedores, profesionales, PyMEs y empresas en toda Argentina.">
+
 <style>
-:root{--vino:#71334f;--rosa:#c98aa6;--lila:#a887b7;--crema:#fff9fb;--tinta:#382c34;--blanco:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;color:var(--tinta);background:var(--crema);line-height:1.55}
-header{background:linear-gradient(135deg,#71334f,#9a5c79 55%,#a887b7);color:white;padding:18px 7%;position:sticky;top:0;z-index:5}
-nav{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:800;font-size:1.15rem}.brand small{display:block;font-weight:400;font-size:.78rem}
-nav a{color:#fff;text-decoration:none;margin-left:16px;font-size:.92rem}
-.hero{min-height:70vh;display:grid;place-items:center;padding:70px 7%;background:radial-gradient(circle at 85% 20%,#ead9ef 0,transparent 35%),linear-gradient(180deg,#fff,#fff6fa)}
-.hero-in{max-width:1120px;width:100%;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
-.kicker{color:var(--vino);font-weight:700;text-transform:uppercase;letter-spacing:.08em}h1{font-size:clamp(2.3rem,6vw,4.8rem);line-height:1.02;margin:.2em 0;color:var(--vino)}
-.lead{font-size:1.18rem;max-width:680px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:13px 20px;border-radius:999px;text-decoration:none;font-weight:700}.primary{background:var(--vino);color:white}.secondary{border:2px solid var(--vino);color:var(--vino)}
-.card-logo{background:white;border:1px solid #eadde4;border-radius:28px;padding:42px;text-align:center;box-shadow:0 18px 50px #71334f1c}.monogram{font-family:Georgia,serif;font-size:6rem;color:var(--vino);line-height:1}.card-logo h2{margin:4px 0;color:var(--vino)}
-section{padding:70px 7%}.wrap{max-width:1120px;margin:auto}.title{text-align:center;color:var(--vino);font-size:2rem;margin-top:0}.subtitle{text-align:center;max-width:760px;margin:-10px auto 35px;color:#685762}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:white;border:1px solid #eadde4;border-radius:20px;padding:25px}.service h3{color:var(--vino);margin-top:0}.about{background:#f3e8ef}.aboutbox{max-width:950px;margin:auto;display:grid;grid-template-columns:280px 1fr;gap:38px;align-items:center}.profile{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;box-shadow:0 16px 38px #71334f2b;border:5px solid #fff}.abouttext{text-align:left}
-.contact{background:var(--vino);color:white;text-align:center}.contact .title{color:white}.contact a{color:white}.pill{display:inline-block;background:#ffffff18;border:1px solid #ffffff55;border-radius:999px;padding:10px 16px;margin:6px}
-footer{text-align:center;padding:25px;background:#54243b;color:#f8eaf1;font-size:.9rem}
-@media(max-width:800px){.hero-in{grid-template-columns:1fr}.card-logo{order:-1;padding:28px}.monogram{font-size:4.5rem}.grid{grid-template-columns:1fr}nav .links{display:none}.aboutbox{grid-template-columns:1fr}.profile{max-width:280px;margin:auto}.abouttext{text-align:center}}
+:root{
+  --bordo:#71334f;
+  --rosa:#c98aa6;
+  --lila:#a887b7;
+  --claro:#faf7f9;
+  --texto:#382c34;
+  --blanco:#ffffff;
+  --verde:#25D366;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--texto);
+  background:var(--claro);
+  line-height:1.6;
+}
+
+header{
+  background:linear-gradient(90deg,#54263d,#71334f,#76558c);
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.nav{
+  max-width:1150px;
+  margin:auto;
+  padding:14px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand img{
+  width:52px;
+  height:52px;
+  object-fit:contain;
+  border-radius:50%;
+  background:white;
+}
+
+.brand strong{
+  display:block;
+  font-size:18px;
+}
+
+.brand small{opacity:.9}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:18px;
+  font-size:14px;
+}
+
+.hero{
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(201,138,166,.18),transparent 28%),
+    linear-gradient(135deg,#fff,#faf5f8);
+}
+
+.container{
+  max-width:1150px;
+  margin:auto;
+  padding:80px 22px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:60px;
+  align-items:center;
+}
+
+.eyebrow{
+  color:var(--bordo);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+h1{
+  font-size:56px;
+  line-height:1.05;
+  margin:15px 0 22px;
+}
+
+h2{
+  font-size:38px;
+  line-height:1.15;
+  margin:0 0 18px;
+}
+
+h3{
+  margin-top:0;
+  color:var(--bordo);
+}
+
+.lead{
+  font-size:19px;
+  max-width:700px;
+}
+
+.hero-logo{
+  width:100%;
+  max-width:380px;
+  display:block;
+  margin:auto;
+  border-radius:28px;
+  box-shadow:0 18px 45px rgba(73,38,55,.14);
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 21px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.primary{
+  background:var(--bordo);
+  color:white;
+}
+
+.secondary{
+  color:var(--bordo);
+  border:1px solid var(--bordo);
+}
+
+.trust{
+  margin-top:32px;
+  font-size:14px;
+  font-weight:bold;
+  color:#6f5b66;
+}
+
+section{background:white}
+
+.alt{background:#f6f0f4}
+
+.section-title{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 45px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:27px;
+  border-radius:20px;
+  box-shadow:0 8px 28px rgba(65,39,52,.07);
+  border:1px solid #eee4e9;
+}
+
+.problem{
+  font-weight:bold;
+  font-size:18px;
+  color:#44323c;
+  margin-bottom:10px;
+}
+
+.feature{
+  border-top:5px solid var(--rosa);
+}
+
+.dark{
+  background:linear-gradient(135deg,#51283c,#71334f);
+  color:white;
+}
+
+.dark h2,.dark h3{color:white}
+
+.dark .card{
+  background:rgba(255,255,255,.09);
+  border-color:rgba(255,255,255,.16);
+  color:white;
+}
+
+.badge{
+  display:inline-block;
+  padding:7px 12px;
+  border-radius:999px;
+  background:#efe3ea;
+  color:var(--bordo);
+  font-weight:bold;
+  font-size:13px;
+}
+
+.semaforo{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:30px;
+}
+
+.light-card{
+  background:#fff;
+  border-radius:18px;
+  padding:22px;
+  color:var(--texto);
+}
+
+.about{
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:50px;
+  align-items:center;
+}
+
+.about img{
+  width:100%;
+  max-width:360px;
+  border-radius:26px;
+  display:block;
+  margin:auto;
+  box-shadow:0 15px 40px rgba(60,35,47,.15);
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.step{
+  background:white;
+  padding:24px;
+  border-radius:18px;
+  border:1px solid #eadde4;
+}
+
+.number{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:var(--bordo);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.final{
+  text-align:center;
+  background:#f6f0f4;
+}
+
+footer{
+  background:#38232e;
+  color:white;
+  text-align:center;
+  padding:35px 20px;
+}
+
+footer a{
+  color:#f1cadb;
+  text-decoration:none;
+}
+
+.whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:62px;
+  height:62px;
+  background:var(--verde);
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:29px;
+  text-decoration:none;
+  box-shadow:0 7px 25px rgba(0,0,0,.22);
+  z-index:200;
+}
+
+@media(max-width:850px){
+  nav{display:none}
+  h1{font-size:42px}
+  h2{font-size:31px}
+  .hero-grid,.about{grid-template-columns:1fr}
+  .hero-logo{max-width:280px}
+  .grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .semaforo{grid-template-columns:1fr}
+}
+
+@media(max-width:520px){
+  .container{padding:60px 18px}
+  h1{font-size:38px}
+  .steps{grid-template-columns:1fr}
+  .brand small{display:none}
+}
 </style>
 </head>
+
 <body>
-<header><nav><div class="brand" style="display:flex;align-items:center;gap:10px"><img src="logo-js-estudio.png" alt="" style="width:48px;height:48px;object-fit:cover;border-radius:50%;background:white"><span>JS Estudio Contable<small>Janet Marysol Saldivia · Contadora Pública Nacional</small></span></div><div class="links"><a href="#servicios">Servicios</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a></div></nav></header>
 
-<main>
-<section class="hero"><div class="hero-in">
-<div><div class="kicker">Contabilidad clara · Atención personalizada</div><h1>Tu tranquilidad contable, en buenas manos.</h1>
-<p class="lead">Asesoramiento contable e impositivo para emprendedores, profesionales, comercios y empresas. Atención en <strong>El Calafate, Santa Cruz</strong> y modalidad <strong>100% online en todo el país</strong>.</p>
-<div class="buttons"><a class="btn primary" href="#contacto">Quiero hacer una consulta</a><a class="btn secondary" href="#servicios">Ver servicios</a></div></div>
-<div class="card-logo"><img src="logo-js-estudio.png" alt="JS Estudio Contable - CP Janet Saldivia" style="width:100%;max-width:480px;height:auto;display:block;margin:auto;border-radius:18px"></div>
-</div></section>
+<header>
+<div class="nav">
+  <div class="brand">
+    <img src="logo-js-estudio.png" alt="JS Estudio Contable">
+    <div>
+      <strong>JS Estudio Contable</strong>
+      <small>Janet Marysol Saldivia · Contadora Pública Nacional</small>
+    </div>
+  </div>
 
-<section id="servicios"><div class="wrap"><h2 class="title">Servicios profesionales</h2><p class="subtitle">Soluciones adaptadas a cada etapa de tu actividad, con acompañamiento profesional y atención cercana.</p>
+  <nav>
+    <a href="#soluciones">Soluciones</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#empresas">Empresas</a>
+    <a href="#colegas">Colegas</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</div>
+</header>
+
+
+<section class="hero">
+<div class="container hero-grid">
+
+<div>
+  <div class="eyebrow">Contabilidad clara · Atención personalizada</div>
+
+  <h1>Tu contabilidad en orden.<br>Tu negocio, más claro.</h1>
+
+  <p class="lead">
+  Contadora Pública Nacional · Atención 100% online en Argentina.
+  </p>
+
+  <p>
+  Acompaño a emprendedores, profesionales, comercios y empresas
+  en impuestos, contabilidad y organización fiscal.
+  </p>
+
+  <div class="buttons">
+    <a class="btn primary"
+       href="https://wa.me/5492966489653?text=Hola%20Janet,%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
+       target="_blank">
+       Quiero hacer una consulta
+    </a>
+
+    <a class="btn secondary" href="#soluciones">
+       Conocer servicios
+    </a>
+  </div>
+
+  <div class="trust">
+    Atención online · Honorarios claros · Seguimiento profesional
+  </div>
+</div>
+
+<div>
+  <img class="hero-logo"
+       src="logo-js-estudio.png"
+       alt="Logo JS Estudio Contable">
+</div>
+
+</div>
+</section>
+
+
+<section id="soluciones" class="alt">
+<div class="container">
+
+<div class="section-title">
+  <span class="badge">Soluciones</span>
+  <h2>¿Qué te está pasando?</h2>
+  <p>No necesitás conocer el nombre del trámite. Empezamos por entender el problema.</p>
+</div>
+
 <div class="grid">
-<div class="service"><h3>Monotributo y ARCA</h3><p>Altas, bajas, recategorizaciones, facturación electrónica y asesoramiento para mantener tu situación fiscal ordenada.</p></div>
-<div class="service"><h3>Impuestos</h3><p>IVA, Ganancias, Ingresos Brutos y obligaciones fiscales para contribuyentes y empresas.</p></div>
-<div class="service"><h3>Sueldos y jornales</h3><p>Liquidación de haberes, cargas sociales y asistencia en obligaciones laborales.</p></div>
-<div class="service"><h3>Sociedades</h3><p>Asesoramiento contable para constitución, funcionamiento y obligaciones de sociedades.</p></div>
-<div class="service"><h3>Contabilidad y balances</h3><p>Registración, organización de información contable, balances y asistencia profesional.</p></div>
-<div class="service"><h3>Consultoría</h3><p>Consultas profesionales, análisis de recibos de sueldo y orientación contable e impositiva.</p></div>
-</div></div></section>
 
-<section id="sobre-mi" class="about"><div class="wrap aboutbox">
-<img class="profile" src="janet-saldivia.jpg" alt="Janet Marysol Saldivia, Contadora Pública Nacional">
-<div class="abouttext"><h2 class="title" style="text-align:left">Sobre mí</h2>
-<p>Soy <strong>Janet Marysol Saldivia, Contadora Pública Nacional, graduada de la Universidad Nacional de Tres de Febrero (UNTREF)</strong>. Desde JS Estudio Contable busco que cada cliente pueda comprender sus obligaciones y tomar decisiones con información clara.</p>
-<p>Trabajo con atención personalizada desde El Calafate y de manera online para clientes de toda Argentina.</p></div></div></section>
+<div class="card feature">
+  <div class="problem">“Tengo deuda y no sé de dónde salió”</div>
+  <h3>Rescate Fiscal</h3>
+  <p>Reviso períodos, obligaciones, presentaciones y deuda para determinar qué ocurrió y cuáles son los próximos pasos.</p>
+</div>
 
-<section id="contacto" class="contact"><div class="wrap"><h2 class="title">Conectemos</h2><p>¿Necesitás asesoramiento contable o impositivo? Escribime y contame tu consulta.</p>
-<div><span class="pill">El Calafate · Santa Cruz</span><span class="pill">Atención online · Todo el país</span></div>
-<p style="margin-top:28px"><strong>JS Estudio Contable</strong><br>Contadora Pública Nacional · Janet Marysol Saldivia</p>
-<p><em>Consulte a un profesional.</em></p></div></section>
-</main>
-<footer>© 2026 JS Estudio Contable · Janet Marysol Saldivia</footer>
-</body></html>
+<div class="card feature">
+  <div class="problem">“Quiero saber si está todo bien”</div>
+  <h3>Chequeo ARCA 360°</h3>
+  <p>Revisión preventiva de tu situación fiscal con un informe claro sobre lo correcto, lo que requiere atención y lo que debería regularizarse.</p>
+</div>
+
+<div class="card feature">
+  <div class="problem">“Quiero cambiar de contador”</div>
+  <h3>Cambio de Contador Seguro</h3>
+  <p>Revisión inicial de presentaciones, deuda, registraciones y documentación para conocer cómo se recibe tu situación.</p>
+</div>
+
+<div class="card feature">
+  <div class="problem">“Quiero otra opinión”</div>
+  <h3>Segunda Opinión Contable</h3>
+  <p>Análisis profesional independiente sobre una situación contable o impositiva concreta.</p>
+</div>
+
+<div class="card feature">
+  <div class="problem">“No sé cuánto gano realmente”</div>
+  <h3>Radiografía de tu Negocio</h3>
+  <p>Análisis de ventas, costos, gastos e impuestos para comprender mejor el resultado de tu actividad.</p>
+</div>
+
+<div class="card feature">
+  <div class="problem">“Tengo obligaciones atrasadas”</div>
+  <h3>Regularización</h3>
+  <p>Revisión de declaraciones juradas pendientes, deuda e inconsistencias para ordenar tu situación.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="servicios">
+<div class="container">
+
+<div class="section-title">
+  <span class="badge">Gestión habitual</span>
+  <h2>También puedo ocuparme del día a día</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Monotributo</h3>
+<p>Altas, bajas, modificaciones, recategorizaciones y seguimiento.</p>
+</div>
+
+<div class="card">
+<h3>Impuestos</h3>
+<p>IVA · Ganancias · Ingresos Brutos · Autónomos.</p>
+</div>
+
+<div class="card">
+<h3>Facturación electrónica</h3>
+<p>Configuración, puntos de venta y acompañamiento.</p>
+</div>
+
+<div class="card">
+<h3>Sueldos</h3>
+<p>Liquidaciones y obligaciones relacionadas.</p>
+</div>
+
+<div class="card">
+<h3>Sociedades</h3>
+<p>Constitución y acompañamiento contable e impositivo según cada caso.</p>
+</div>
+
+<div class="card">
+<h3>Regularizaciones</h3>
+<p>DDJJ pendientes, deuda e inconsistencias fiscales.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="empresas" class="dark">
+<div class="container">
+
+<div class="section-title">
+  <span class="badge">Para empresas</span>
+  <h2>Tu área contable, sin incorporarla a tu estructura</h2>
+</div>
+
+<div class="card">
+<h3>Back Office Contable</h3>
+
+<p>
+Apoyo remoto para PyMEs y empresas que necesitan organización administrativa y contable.
+</p>
+
+<p>
+Registraciones · Conciliaciones · Facturación · Cuentas corrientes ·
+Papeles de trabajo · Información para balances · Reportes
+</p>
+
+<a class="btn secondary"
+style="color:white;border-color:white"
+href="https://wa.me/5492966489653?text=Hola%20Janet,%20quisiera%20consultar%20por%20el%20servicio%20de%20Back%20Office%20Contable."
+target="_blank">
+Consultar servicio para empresas
+</a>
+
+</div>
+</div>
+</section>
+
+
+<section id="colegas" class="alt">
+<div class="container">
+
+<div class="section-title">
+<span class="badge">Para colegas</span>
+<h2>¿Sos contador/a y necesitás una mano?</h2>
+</div>
+
+<div class="card">
+<h3>CONTADORA ON DEMAND</h3>
+
+<p>
+Apoyo profesional remoto para estudios contables.
+Podés contratar colaboración por tarea, proyecto o períodos de mayor demanda,
+manteniendo vos la relación con tu cliente.
+</p>
+
+<p>
+IVA · IIBB · Registraciones · Conciliaciones · Controles ·
+Papeles de trabajo · Preparación de información.
+</p>
+
+<p><strong>Confidencialidad profesional.</strong></p>
+
+<a class="btn primary"
+href="https://wa.me/5492966489653?text=Hola%20Janet,%20quisiera%20consultar%20disponibilidad%20para%20Contadora%20On%20Demand."
+target="_blank">
+Consultar disponibilidad
+</a>
+
+</div>
+</div>
+</section>
+
+
+<section class="dark">
+<div class="container">
+
+<div class="section-title">
+<span class="badge">Servicio destacado</span>
+<h2>🔎 Chequeo ARCA 360°</h2>
+<p>¿Estás segura/o de que tu situación fiscal está en orden?</p>
+<p>No necesitás esperar una intimación para averiguarlo.</p>
+</div>
+
+<div class="semaforo">
+
+<div class="light-card">
+<h3>🟢 Correcto</h3>
+<p>Obligaciones verificadas sin observaciones relevantes.</p>
+</div>
+
+<div class="light-card">
+<h3>🟡 Atención</h3>
+<p>Hay cuestiones que conviene revisar.</p>
+</div>
+
+<div class="light-card">
+<h3>🔴 Acción</h3>
+<p>Se detectaron situaciones que requieren regularización.</p>
+</div>
+
+</div>
+
+<p style="text-align:center;margin-top:30px">
+<strong>Recibís un informe profesional + prioridades + próximos pasos.</strong><br>
+Podés contratar solamente el chequeo. No requiere abono mensual.
+</p>
+
+</div>
+</section>
+
+
+<section>
+<div class="container">
+
+<div class="section-title">
+<span class="badge">Modalidades</span>
+<h2>Un servicio acorde a cada etapa</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Plan Monotributo</h3>
+<p>Para quienes quieren delegar el seguimiento habitual de sus obligaciones.</p>
+</div>
+
+<div class="card">
+<h3>Plan Emprendedor / PyME</h3>
+<p>Impuestos, vencimientos, seguimiento y reportes.</p>
+</div>
+
+<div class="card">
+<h3>Plan Empresa</h3>
+<p>Servicio personalizado según operaciones, necesidades y volumen de actividad.</p>
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:30px">
+<a class="btn primary"
+href="https://wa.me/5492966489653?text=Hola%20Janet,%20quisiera%20solicitar%20una%20propuesta%20de%20servicios."
+target="_blank">
+Solicitar propuesta
+</a>
+</div>
+
+</div>
+</section>
+
+
+<section id="sobre-mi" class="alt">
+<div class="container about">
+
+<div>
+<img src="janet-saldivia.jpg" alt="Janet Marysol Saldivia - Contadora Pública">
+</div>
+
+<div>
+<span class="badge">Detrás del estudio</span>
+
+<h2>Janet Marysol Saldivia</h2>
+
+<h3>Contadora Pública Nacional</h3>
+
+<p>
+Matriculada en el Consejo Profesional de Ciencias Económicas de Santa Cruz.
+</p>
+
+<p>
+Mi objetivo es que entiendas tu situación contable e impositiva sin convertir cada consulta
+en una conversación llena de tecnicismos.
+</p>
+
+<p>
+Trabajo de manera online con clientes de cualquier lugar de Argentina,
+combinando herramientas digitales con atención personalizada.
+</p>
+
+<p><strong>El Calafate · Santa Cruz</strong></p>
+
+</div>
+</div>
+</section>
+
+
+<section>
+<div class="container">
+
+<div class="section-title">
+<span class="badge">Simple y seguro</span>
+<h2>Cómo trabajamos</h2>
+</div>
+
+<div class="steps">
+
+<div class="step">
+<div class="number">1</div>
+<h3>Me contás tu situación</h3>
+<p>Una descripción breve para entender qué necesitás.</p>
+</div>
+
+<div class="step">
+<div class="number">2</div>
+<h3>Definimos el servicio</h3>
+<p>Te explico alcance, documentación necesaria, honorarios y plazo.</p>
+</div>
+
+<div class="step">
+<div class="number">3</div>
+<h3>Autorización segura</h3>
+<p>Cuando sea necesario operar en sistemas fiscales, utilizamos las autorizaciones correspondientes. No necesitás compartir tu clave fiscal.</p>
+</div>
+
+<div class="step">
+<div class="number">4</div>
+<h3>Recibís el trabajo</h3>
+<p>Informe, presentación, regularización o seguimiento según el servicio contratado.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="contacto" class="final">
+<div class="container">
+
+<h2>No necesitás saber qué trámite pedir.</h2>
+
+<p class="lead" style="margin:auto">
+Contame qué te está pasando y vemos cuál es el servicio adecuado.
+</p>
+
+<div class="buttons" style="justify-content:center">
+
+<a class="btn primary"
+href="https://wa.me/5492966489653?text=Hola%20Janet,%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
+target="_blank">
+Hablar con Janet por WhatsApp
+</a>
+
+</div>
+
+<p style="margin-top:30px">
+<strong>El Calafate · Santa Cruz · Atención online en toda Argentina</strong>
+</p>
+
+</div>
+</section>
+
+
+<footer>
+<strong>JS Estudio Contable</strong><br>
+Janet Marysol Saldivia · Contadora Pública Nacional<br>
+El Calafate · Santa Cruz<br><br>
+© 2026 JS Estudio Contable
+</footer>
+
+
+<a class="whatsapp"
+href="https://wa.me/5492966489653?text=Hola%20Janet,%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
+target="_blank"
+aria-label="Contactar por WhatsApp">
+💬
+</a>
+
+</body>
+</html>
+
