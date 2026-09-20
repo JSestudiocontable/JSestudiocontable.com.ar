@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JS Estudio Contable | Janet Marysol Saldivia</title>
+<meta name="description" content="Contadora Pública Nacional. Monotributo, ARCA, impuestos, sueldos, sociedades y asesoramiento contable. Atención en El Calafate y online en todo el país.">
+<style>
+:root{--vino:#71334f;--rosa:#c98aa6;--lila:#a887b7;--crema:#fff9fb;--tinta:#382c34;--blanco:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;color:var(--tinta);background:var(--crema);line-height:1.55}
+header{background:linear-gradient(135deg,#71334f,#9a5c79 55%,#a887b7);color:white;padding:18px 7%;position:sticky;top:0;z-index:5}
+nav{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:800;font-size:1.15rem}.brand small{display:block;font-weight:400;font-size:.78rem}
+nav a{color:#fff;text-decoration:none;margin-left:16px;font-size:.92rem}
+.hero{min-height:70vh;display:grid;place-items:center;padding:70px 7%;background:radial-gradient(circle at 85% 20%,#ead9ef 0,transparent 35%),linear-gradient(180deg,#fff,#fff6fa)}
+.hero-in{max-width:1120px;width:100%;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.kicker{color:var(--vino);font-weight:700;text-transform:uppercase;letter-spacing:.08em}h1{font-size:clamp(2.3rem,6vw,4.8rem);line-height:1.02;margin:.2em 0;color:var(--vino)}
+.lead{font-size:1.18rem;max-width:680px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:13px 20px;border-radius:999px;text-decoration:none;font-weight:700}.primary{background:var(--vino);color:white}.secondary{border:2px solid var(--vino);color:var(--vino)}
+.card-logo{background:white;border:1px solid #eadde4;border-radius:28px;padding:42px;text-align:center;box-shadow:0 18px 50px #71334f1c}.monogram{font-family:Georgia,serif;font-size:6rem;color:var(--vino);line-height:1}.card-logo h2{margin:4px 0;color:var(--vino)}
+section{padding:70px 7%}.wrap{max-width:1120px;margin:auto}.title{text-align:center;color:var(--vino);font-size:2rem;margin-top:0}.subtitle{text-align:center;max-width:760px;margin:-10px auto 35px;color:#685762}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:white;border:1px solid #eadde4;border-radius:20px;padding:25px}.service h3{color:var(--vino);margin-top:0}.about{background:#f3e8ef}.aboutbox{max-width:950px;margin:auto;display:grid;grid-template-columns:280px 1fr;gap:38px;align-items:center}.profile{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;box-shadow:0 16px 38px #71334f2b;border:5px solid #fff}.abouttext{text-align:left}
+.contact{background:var(--vino);color:white;text-align:center}.contact .title{color:white}.contact a{color:white}.pill{display:inline-block;background:#ffffff18;border:1px solid #ffffff55;border-radius:999px;padding:10px 16px;margin:6px}
+footer{text-align:center;padding:25px;background:#54243b;color:#f8eaf1;font-size:.9rem}
+@media(max-width:800px){.hero-in{grid-template-columns:1fr}.card-logo{order:-1;padding:28px}.monogram{font-size:4.5rem}.grid{grid-template-columns:1fr}nav .links{display:none}.aboutbox{grid-template-columns:1fr}.profile{max-width:280px;margin:auto}.abouttext{text-align:center}}
+</style>
+</head>
+<body>
+<header><nav><div class="brand" style="display:flex;align-items:center;gap:10px"><img src="logo-js-estudio.png" alt="" style="width:48px;height:48px;object-fit:cover;border-radius:50%;background:white"><span>JS Estudio Contable<small>Janet Marysol Saldivia · Contadora Pública Nacional</small></span></div><div class="links"><a href="#servicios">Servicios</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a></div></nav></header>
+
+<main>
+<section class="hero"><div class="hero-in">
+<div><div class="kicker">Contabilidad clara · Atención personalizada</div><h1>Tu tranquilidad contable, en buenas manos.</h1>
+<p class="lead">Asesoramiento contable e impositivo para emprendedores, profesionales, comercios y empresas. Atención en <strong>El Calafate, Santa Cruz</strong> y modalidad <strong>100% online en todo el país</strong>.</p>
+<div class="buttons"><a class="btn primary" href="#contacto">Quiero hacer una consulta</a><a class="btn secondary" href="#servicios">Ver servicios</a></div></div>
+<div class="card-logo"><img src="logo-js-estudio.png" alt="JS Estudio Contable - CP Janet Saldivia" style="width:100%;max-width:480px;height:auto;display:block;margin:auto;border-radius:18px"></div>
+</div></section>
+
+<section id="servicios"><div class="wrap"><h2 class="title">Servicios profesionales</h2><p class="subtitle">Soluciones adaptadas a cada etapa de tu actividad, con acompañamiento profesional y atención cercana.</p>
+<div class="grid">
+<div class="service"><h3>Monotributo y ARCA</h3><p>Altas, bajas, recategorizaciones, facturación electrónica y asesoramiento para mantener tu situación fiscal ordenada.</p></div>
+<div class="service"><h3>Impuestos</h3><p>IVA, Ganancias, Ingresos Brutos y obligaciones fiscales para contribuyentes y empresas.</p></div>
+<div class="service"><h3>Sueldos y jornales</h3><p>Liquidación de haberes, cargas sociales y asistencia en obligaciones laborales.</p></div>
+<div class="service"><h3>Sociedades</h3><p>Asesoramiento contable para constitución, funcionamiento y obligaciones de sociedades.</p></div>
+<div class="service"><h3>Contabilidad y balances</h3><p>Registración, organización de información contable, balances y asistencia profesional.</p></div>
+<div class="service"><h3>Consultoría</h3><p>Consultas profesionales, análisis de recibos de sueldo y orientación contable e impositiva.</p></div>
+</div></div></section>
+
+<section id="sobre-mi" class="about"><div class="wrap aboutbox">
+<img class="profile" src="janet-saldivia.jpg" alt="Janet Marysol Saldivia, Contadora Pública Nacional">
+<div class="abouttext"><h2 class="title" style="text-align:left">Sobre mí</h2>
+<p>Soy <strong>Janet Marysol Saldivia, Contadora Pública Nacional, graduada de la Universidad Nacional de Tres de Febrero (UNTREF)</strong>. Desde JS Estudio Contable busco que cada cliente pueda comprender sus obligaciones y tomar decisiones con información clara.</p>
+<p>Trabajo con atención personalizada desde El Calafate y de manera online para clientes de toda Argentina.</p></div></div></section>
+
+<section id="contacto" class="contact"><div class="wrap"><h2 class="title">Conectemos</h2><p>¿Necesitás asesoramiento contable o impositivo? Escribime y contame tu consulta.</p>
+<div><span class="pill">El Calafate · Santa Cruz</span><span class="pill">Atención online · Todo el país</span></div>
+<p style="margin-top:28px"><strong>JS Estudio Contable</strong><br>Contadora Pública Nacional · Janet Marysol Saldivia</p>
+<p><em>Consulte a un profesional.</em></p></div></section>
+</main>
+<footer>© 2026 JS Estudio Contable · Janet Marysol Saldivia</footer>
+</body></html>
