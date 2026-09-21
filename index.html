@@ -6,520 +6,607 @@
 
 <title>JS Estudio Contable | Janet Marysol Saldivia</title>
 
-<meta name="description" content="JS Estudio Contable. Contadora Pública Janet Marysol Saldivia. Atención contable 100% online en toda Argentina.">
+<meta name="description" content="JS Estudio Contable. Contadora Pública Janet Marysol Saldivia. Atención contable online en toda Argentina.">
 
 <style>
+
 :root{
-  --bordo:#71334f;
-  --bordo2:#542038;
-  --rosa:#c98aa6;
-  --rosa2:#f3dce6;
-  --lila:#a98bb7;
-  --fondo:#fff9fb;
-  --crema:#fff5f7;
-  --texto:#382c34;
-  --gris:#756872;
-  --blanco:#ffffff;
-  --verde:#25D366;
+  --bordo:#6f0d36;
+  --bordo-oscuro:#4e0927;
+  --rosa:#c65c8a;
+  --rosa-claro:#f4d7e3;
+  --lila:#aa7caf;
+  --crema:#fff8fa;
+  --texto:#31242b;
+  --gris:#6d6268;
+  --verde:#25d366;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
   margin:0;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   color:var(--texto);
-  background:var(--fondo);
+  background:#fff;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
+a{text-decoration:none;color:inherit}
 
-img{
-  max-width:100%;
-}
+img{max-width:100%;display:block}
 
 .container{
   width:min(1180px,92%);
   margin:auto;
 }
 
-/* CABECERA */
+/* =========================
+   PORTADA
+========================= */
 
-header{
-  background:linear-gradient(90deg,var(--bordo2),var(--bordo));
-  color:white;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 3px 15px rgba(70,30,50,.18);
+.hero{
+  position:relative;
+  background:
+    radial-gradient(circle at 72% 40%,rgba(239,198,216,.55),transparent 38%),
+    linear-gradient(105deg,#fffafa 0%,#fff4f7 56%,#f5dfe8 100%);
+  overflow:hidden;
+}
+
+/* BARRA SUPERIOR */
+
+.topbar{
+  height:84px;
+  background:linear-gradient(90deg,#570927,#7b103d);
+  position:relative;
+  z-index:10;
 }
 
 .nav{
-  min-height:72px;
+  height:84px;
   display:flex;
   align-items:center;
   justify-content:flex-end;
-  gap:28px;
+  gap:34px;
+  padding-left:310px;
 }
 
 .nav a{
-  font-size:14px;
-  font-weight:700;
+  color:white;
+  font-size:15px;
+  font-weight:600;
   transition:.2s;
 }
 
 .nav a:hover{
-  opacity:.75;
+  opacity:.72;
 }
 
-/* PORTADA */
+/* LOGO GRANDE */
 
-.hero{
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 88% 30%,#f1dce8 0,transparent 35%),
-    linear-gradient(120deg,#fff9fb,#fdf0f5);
+.logo-block{
+  position:absolute;
+  z-index:30;
+  left:max(4%,calc((100% - 1180px)/2));
+  top:12px;
+  width:270px;
+  text-align:center;
 }
 
-.hero-main{
-  min-height:650px;
+.logo-circle{
+  width:245px;
+  height:245px;
+  margin:auto;
+  border-radius:50%;
+  background:#fffafa;
   display:grid;
-  grid-template-columns:1.08fr .92fr;
-  align-items:center;
-  gap:55px;
-  padding:58px 0 42px;
+  place-items:center;
+  border:1px solid rgba(111,13,54,.3);
+  box-shadow:0 8px 25px rgba(80,15,45,.08);
 }
 
-.hero-left{
-  position:relative;
-  z-index:2;
-}
-
-.logo-area{
-  display:flex;
-  align-items:center;
-  gap:24px;
-  margin-bottom:30px;
-}
-
-.main-logo{
-  width:175px;
-  height:175px;
+.logo-circle img{
+  width:215px;
+  height:215px;
   object-fit:contain;
-  filter:drop-shadow(0 12px 18px rgba(113,51,79,.18));
 }
 
-.logo-copy{
-  color:var(--bordo);
-  font-size:13px;
-  line-height:1.65;
-  letter-spacing:2px;
+.logo-words{
+  margin-top:-2px;
+  color:#111;
+}
+
+.logo-words strong{
+  display:block;
+  font-family:Georgia,serif;
+  font-size:25px;
+  letter-spacing:.5px;
+  border-bottom:2px solid var(--bordo);
+  padding-bottom:4px;
+}
+
+.logo-words span{
+  display:block;
+  font-size:11px;
   font-weight:700;
-  text-transform:uppercase;
+  letter-spacing:4px;
+  line-height:1.5;
+  margin-top:8px;
 }
 
-.eyebrow{
-  color:var(--bordo);
-  text-transform:uppercase;
-  letter-spacing:2.5px;
-  font-size:12px;
-  font-weight:800;
-  margin-bottom:15px;
+/* CUERPO DE PORTADA */
+
+.hero-content{
+  min-height:720px;
+  display:grid;
+  grid-template-columns:56% 44%;
+  align-items:center;
+  position:relative;
+  padding-top:175px;
+  padding-bottom:80px;
+}
+
+/* HOJAS */
+
+.leaves{
+  position:absolute;
+  left:-110px;
+  top:280px;
+  width:210px;
+  height:390px;
+  opacity:.65;
+}
+
+.leaf{
+  position:absolute;
+  width:115px;
+  height:45px;
+  border-radius:100% 0 100% 0;
+  background:linear-gradient(90deg,#e5a4c1,#c65c8a);
+  transform:rotate(-30deg);
+}
+
+.leaf:nth-child(1){top:0;left:35px}
+.leaf:nth-child(2){top:70px;left:70px;transform:rotate(-8deg)}
+.leaf:nth-child(3){top:145px;left:25px;transform:rotate(-35deg)}
+.leaf:nth-child(4){top:220px;left:75px;transform:rotate(-5deg)}
+.leaf:nth-child(5){top:295px;left:30px;transform:rotate(-32deg)}
+
+/* TEXTO */
+
+.hero-copy{
+  position:relative;
+  z-index:5;
+  padding-left:40px;
+}
+
+.hero-kicker{
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:3px;
+  margin-bottom:17px;
 }
 
 .hero h1{
   margin:0;
-  font-family:Georgia, "Times New Roman", serif;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:70px;
+  line-height:.96;
   color:var(--bordo);
-  font-size:65px;
-  line-height:.98;
-  max-width:680px;
+  letter-spacing:-2px;
 }
 
-.hero h1 span{
-  display:block;
-  color:var(--lila);
-  font-weight:400;
+.hero h1 .pink{
+  color:#c15d89;
 }
 
-.hero-description{
-  max-width:610px;
-  color:#665661;
-  font-size:17px;
-  line-height:1.65;
-  margin:24px 0;
+.hero-subtitle{
+  margin:19px 0 24px;
+  font-size:21px;
+  color:#4f474b;
 }
 
-.hero-services{
+/* SERVICIOS PORTADA */
+
+.quick-services{
   display:grid;
   grid-template-columns:repeat(5,1fr);
-  gap:10px;
-  margin:28px 0;
+  gap:14px;
+  margin-top:28px;
+  max-width:720px;
 }
 
-.hero-service{
+.quick-item{
   text-align:center;
-  font-size:12px;
-  line-height:1.35;
-  color:var(--bordo);
+  font-size:13px;
   font-weight:700;
+  line-height:1.3;
 }
 
-.hero-service .icon{
-  width:46px;
-  height:46px;
-  margin:0 auto 8px;
+.quick-icon{
+  width:58px;
+  height:58px;
   border-radius:50%;
+  margin:0 auto 9px;
+  background:#f1cadb;
+  color:var(--bordo);
   display:grid;
   place-items:center;
-  background:var(--rosa2);
-  font-size:21px;
+  font-size:26px;
 }
 
-.buttons{
+/* BOTONES */
+
+.hero-buttons{
   display:flex;
-  gap:13px;
+  gap:15px;
   flex-wrap:wrap;
-  margin-top:26px;
+  margin-top:28px;
 }
 
 .btn{
+  min-height:50px;
+  padding:0 25px;
+  border-radius:28px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-height:48px;
-  padding:0 23px;
-  border-radius:28px;
-  font-weight:800;
   font-size:14px;
-  border:2px solid var(--bordo);
-  transition:.25s;
+  font-weight:800;
+  transition:.2s;
 }
 
 .btn-primary{
-  background:var(--bordo);
+  background:linear-gradient(90deg,#7b103d,#9c2255);
   color:white;
 }
 
-.btn-secondary{
-  background:white;
+.btn-outline{
+  border:2px solid var(--bordo);
   color:var(--bordo);
+  background:#fff9fb;
 }
 
-.btn:hover{
-  transform:translateY(-2px);
-}
+.btn:hover{transform:translateY(-2px)}
 
-/* PARTE DERECHA PORTADA */
+/* ESCENA DERECHA */
 
-.hero-right{
+.hero-scene{
+  height:560px;
   position:relative;
-  min-height:510px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
 }
 
-.hero-blob{
+.script{
   position:absolute;
-  width:480px;
-  height:480px;
-  border-radius:48% 52% 45% 55%;
-  background:linear-gradient(145deg,#efd7e2,#f8eaf0);
+  top:5px;
+  left:30px;
+  z-index:5;
+  color:#8d2853;
+  font-family:"Brush Script MT","Segoe Script",cursive;
+  font-size:37px;
+  line-height:.95;
   transform:rotate(-7deg);
 }
 
-.desk-card{
-  position:relative;
-  width:92%;
-  max-width:500px;
-  min-height:390px;
-  background:white;
-  border-radius:32px;
-  box-shadow:0 25px 60px rgba(87,40,62,.18);
-  padding:35px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  overflow:hidden;
+/* PLANTA */
+
+.plant{
+  position:absolute;
+  right:-15px;
+  top:35px;
+  width:230px;
+  height:260px;
+  opacity:.72;
+  filter:blur(1px);
 }
 
-.desk-card:after{
+.plant-stem{
+  width:5px;
+  height:210px;
+  background:#758c64;
+  position:absolute;
+  left:110px;
+  top:30px;
+  transform:rotate(13deg);
+}
+
+.plant-leaf{
+  position:absolute;
+  width:90px;
+  height:45px;
+  border-radius:100% 0 100% 0;
+  background:#81966f;
+}
+
+.plant-leaf:nth-child(2){top:25px;left:110px;transform:rotate(15deg)}
+.plant-leaf:nth-child(3){top:80px;left:55px;transform:rotate(180deg)}
+.plant-leaf:nth-child(4){top:120px;left:125px;transform:rotate(25deg)}
+.plant-leaf:nth-child(5){top:170px;left:55px;transform:rotate(175deg)}
+
+/* NOTEBOOK */
+
+.laptop{
+  position:absolute;
+  z-index:4;
+  width:500px;
+  right:-5px;
+  top:145px;
+}
+
+.laptop-screen{
+  width:430px;
+  height:275px;
+  margin:auto;
+  border:13px solid #28252a;
+  border-radius:16px 16px 8px 8px;
+  background:linear-gradient(135deg,#fff8fb,#f4dce7);
+  padding:22px 27px;
+  box-shadow:0 18px 35px rgba(55,25,40,.18);
+}
+
+.laptop-screen img{
+  width:78px;
+  margin-bottom:8px;
+}
+
+.laptop-screen h3{
+  font-family:Georgia,serif;
+  font-size:29px;
+  line-height:1;
+  color:var(--bordo);
+  margin:5px 0 9px;
+}
+
+.laptop-screen p{
+  font-size:14px;
+  margin:0 0 15px;
+}
+
+.mini-button{
+  display:inline-block;
+  background:var(--bordo);
+  color:white;
+  border-radius:18px;
+  padding:8px 18px;
+  font-size:11px;
+}
+
+.keyboard{
+  height:38px;
+  width:500px;
+  background:linear-gradient(#d4d1d3,#a7a3a6);
+  clip-path:polygon(8% 0,92% 0,100% 100%,0 100%);
+  border-radius:0 0 15px 15px;
+  box-shadow:0 12px 18px rgba(0,0,0,.18);
+}
+
+/* CUADERNO */
+
+.notebook{
+  position:absolute;
+  z-index:7;
+  width:185px;
+  height:125px;
+  right:-10px;
+  bottom:15px;
+  background:#fff9f7;
+  transform:rotate(7deg);
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+  padding:25px 18px;
+  font-family:"Brush Script MT","Segoe Script",cursive;
+  font-size:21px;
+  color:#7d244b;
+  text-align:center;
+}
+
+/* MESA */
+
+.desk{
+  position:absolute;
+  bottom:-30px;
+  left:-80px;
+  right:-150px;
+  height:155px;
+  background:linear-gradient(#ead8d2,#d9c3bd);
+  transform:skewY(2deg);
+  z-index:1;
+}
+
+/* FRANJA INFERIOR */
+
+.hero-band{
+  position:relative;
+  z-index:20;
+  margin-top:-18px;
+  background:linear-gradient(90deg,#570927,#7d103d);
+  color:white;
+  padding:31px 0;
+}
+
+.hero-band:before{
   content:"";
   position:absolute;
-  width:180px;
-  height:180px;
-  border-radius:50%;
-  background:#f3dce7;
-  right:-75px;
-  bottom:-75px;
+  left:0;
+  top:-32px;
+  width:100%;
+  height:45px;
+  background:#7d103d;
+  clip-path:polygon(0 35%,15% 75%,31% 42%,48% 72%,65% 38%,82% 65%,100% 25%,100% 100%,0 100%);
 }
 
-.handwritten{
-  position:absolute;
-  top:18px;
-  right:25px;
-  color:var(--bordo);
-  font-family:cursive;
-  font-size:19px;
-  transform:rotate(-4deg);
-}
-
-.screen{
-  position:relative;
-  z-index:2;
-  border:8px solid #4f3d4c;
-  border-radius:16px;
-  background:#fff8fb;
-  padding:28px;
-  text-align:center;
-  box-shadow:0 12px 25px rgba(0,0,0,.12);
-}
-
-.screen img{
-  width:95px;
-  margin-bottom:10px;
-}
-
-.screen h3{
-  font-family:Georgia,serif;
-  color:var(--bordo);
-  font-size:27px;
-  margin:5px 0;
-}
-
-.screen p{
-  color:var(--gris);
-  margin:7px 0 15px;
-}
-
-.screen-button{
-  display:inline-block;
-  padding:9px 17px;
-  border-radius:20px;
-  background:var(--rosa);
-  color:white;
-  font-size:12px;
-  font-weight:700;
-}
-
-/* FRANJA INFERIOR DE PORTADA */
-
-.hero-bottom{
-  background:linear-gradient(90deg,var(--bordo2),var(--bordo));
-  color:white;
-  padding:23px 0;
-}
-
-.hero-bottom-grid{
+.band-grid{
   display:grid;
-  grid-template-columns:1fr 1.35fr 1fr;
-  gap:25px;
+  grid-template-columns:1.05fr 1.45fr .8fr;
   align-items:center;
+  gap:28px;
 }
 
-.hero-bottom-item{
+.band-item{
+  min-height:62px;
   display:flex;
   align-items:center;
-  gap:13px;
+  gap:15px;
 }
 
-.hero-bottom-icon{
-  font-size:29px;
+.band-item + .band-item{
+  border-left:1px solid rgba(255,255,255,.5);
+  padding-left:35px;
 }
 
-.hero-bottom small{
+.argentina{
+  font-size:43px;
+}
+
+.band-item strong{
   display:block;
-  opacity:.8;
-  margin-bottom:3px;
+  font-size:16px;
 }
 
-.hero-bottom strong{
-  font-size:14px;
-}
-
-.whatsapp-mini{
-  justify-content:flex-end;
-}
-
-.whatsapp-pill{
-  background:var(--verde);
-  color:white;
-  padding:12px 18px;
-  border-radius:25px;
-  font-weight:800;
+.band-item span{
+  display:block;
+  margin-top:5px;
   font-size:13px;
+  opacity:.92;
 }
 
-/* SECCIONES */
+.whatsapp-band{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  background:#fff1f6;
+  color:var(--bordo);
+  padding:14px 18px;
+  border-radius:28px;
+  font-weight:800;
+}
 
-section.content{
+/* =========================
+   RESTO DE LA WEB
+========================= */
+
+.section{
   padding:85px 0;
 }
 
-.section-head{
+.soft{
+  background:#fcf2f6;
+}
+
+.section-heading{
   max-width:760px;
-  margin-bottom:40px;
+  margin-bottom:38px;
 }
 
-.section-head small{
-  color:var(--rosa);
+.section-heading small{
+  color:#b44c79;
   text-transform:uppercase;
-  letter-spacing:2px;
   font-weight:800;
+  letter-spacing:2px;
 }
 
-.section-head h2{
+.section-heading h2{
+  margin:8px 0 12px;
   color:var(--bordo);
   font-family:Georgia,serif;
-  font-size:42px;
-  margin:8px 0 12px;
+  font-size:43px;
 }
 
-.section-head p{
+.section-heading p{
   color:var(--gris);
   line-height:1.7;
+  font-size:16px;
 }
 
 /* NOVEDADES */
 
-.news-section{
-  background:white;
-}
-
-.news-wrapper{
+.news-shell{
   position:relative;
 }
 
 .news-track{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
+  display:flex;
+  gap:22px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  scroll-snap-type:x mandatory;
+  padding:5px 4px 25px;
+  scrollbar-width:none;
 }
+
+.news-track::-webkit-scrollbar{display:none}
 
 .news-card{
-  background:var(--fondo);
-  border:1px solid #ecdbe3;
-  border-radius:22px;
+  flex:0 0 480px;
+  scroll-snap-align:start;
+  background:white;
+  border-radius:23px;
   overflow:hidden;
-  box-shadow:0 8px 24px rgba(90,45,65,.07);
-  transition:.25s;
+  border:1px solid #ead6df;
+  box-shadow:0 10px 30px rgba(80,20,50,.08);
 }
 
-.news-card:hover{
-  transform:translateY(-5px);
-}
-
-.news-top{
-  min-height:115px;
-  background:linear-gradient(135deg,var(--bordo),var(--lila));
-  color:white;
+.news-cover{
+  height:220px;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:28px;
-  font-weight:800;
+  background:linear-gradient(135deg,#7b103d,#b46696);
+  color:white;
+  font-family:Georgia,serif;
+  font-size:32px;
 }
 
 .news-body{
-  padding:22px;
+  padding:25px;
 }
 
 .news-body small{
-  color:var(--rosa);
+  color:#b44c79;
   font-weight:800;
 }
 
 .news-body h3{
   color:var(--bordo);
-  font-size:19px;
-  margin:8px 0;
+  font-size:21px;
+  min-height:50px;
 }
 
 .news-body p{
   color:var(--gris);
-  font-size:14px;
-  line-height:1.55;
-  min-height:66px;
+  line-height:1.6;
+  min-height:92px;
 }
 
-.read-more{
+.read{
   border:0;
+  padding:0;
   background:none;
   color:var(--bordo);
   font-weight:800;
-  padding:0;
   cursor:pointer;
-  font-size:14px;
+  font-size:15px;
 }
 
-/* MODAL NOVEDADES */
-
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(50,25,38,.72);
-  z-index:9999;
-  padding:20px;
-  align-items:center;
-  justify-content:center;
-}
-
-.modal.open{
+.news-arrows{
   display:flex;
+  gap:10px;
+  justify-content:flex-end;
+  margin-top:10px;
 }
 
-.modal-box{
+.arrow{
+  width:46px;
+  height:46px;
+  border:1px solid #d8b9c7;
+  border-radius:50%;
   background:white;
-  width:min(700px,96%);
-  max-height:85vh;
-  overflow:auto;
-  border-radius:26px;
-  padding:38px;
-  position:relative;
-  box-shadow:0 30px 80px rgba(0,0,0,.3);
-}
-
-.close-modal{
-  position:absolute;
-  right:20px;
-  top:15px;
-  border:0;
-  background:none;
-  font-size:31px;
   color:var(--bordo);
   cursor:pointer;
+  font-size:21px;
 }
 
-.modal-box h2{
-  color:var(--bordo);
-  font-family:Georgia,serif;
-  font-size:32px;
-  margin:8px 35px 18px 0;
-}
-
-.modal-box p{
-  color:#5e5058;
-  font-size:16px;
-  line-height:1.75;
-}
-
-/* SERVICIOS */
-
-.alt{
-  background:#f9edf2;
-}
+/* TARJETAS */
 
 .cards{
   display:grid;
@@ -529,55 +616,58 @@ section.content{
 
 .card{
   background:white;
-  border-radius:20px;
   padding:28px;
-  box-shadow:0 8px 25px rgba(80,35,55,.07);
+  border-radius:20px;
+  box-shadow:0 8px 24px rgba(75,20,45,.07);
+}
+
+.card-icon{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:#f3d6e2;
+  display:grid;
+  place-items:center;
+  font-size:23px;
 }
 
 .card h3{
   color:var(--bordo);
-  margin-top:0;
+  margin:17px 0 9px;
 }
 
 .card p{
   color:var(--gris);
-  line-height:1.6;
-}
-
-.card-icon{
-  font-size:28px;
-  margin-bottom:15px;
+  line-height:1.65;
 }
 
 /* EMPRESAS */
 
-.business{
-  background:linear-gradient(120deg,var(--bordo2),var(--bordo));
+.dark{
+  background:linear-gradient(120deg,#510927,#79103c);
   color:white;
 }
 
-.business .section-head h2,
-.business .section-head p,
-.business .section-head small{
+.dark .section-heading h2,
+.dark .section-heading p,
+.dark .section-heading small{
   color:white;
 }
 
-.business-grid{
+.two-cols{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:25px;
+  gap:22px;
 }
 
-.business-card{
+.dark-card{
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.09);
   padding:30px;
-  background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.18);
   border-radius:22px;
 }
 
-.business-card h3{
-  font-size:25px;
-}
+.dark-card h3{font-size:25px}
 
 /* PLANES */
 
@@ -589,9 +679,9 @@ section.content{
 
 .plan{
   background:white;
-  border:1px solid #ead7df;
-  border-radius:22px;
+  border:1px solid #e9d5df;
   padding:30px;
+  border-radius:22px;
 }
 
 .plan h3{
@@ -599,95 +689,85 @@ section.content{
   font-size:23px;
 }
 
-.plan ul{
-  padding-left:20px;
-  line-height:1.9;
+.plan li{
+  margin-bottom:12px;
   color:var(--gris);
 }
 
 /* SOBRE MI */
 
-.about-grid{
+.about{
   display:grid;
   grid-template-columns:.7fr 1.3fr;
   gap:55px;
   align-items:center;
 }
 
-.about-photo{
-  border-radius:30px;
-  overflow:hidden;
-  box-shadow:0 20px 50px rgba(80,35,55,.15);
-}
-
 .about-photo img{
-  display:block;
   width:100%;
+  border-radius:28px;
+  box-shadow:0 18px 45px rgba(80,20,50,.15);
 }
 
-.about-text h2{
-  font-family:Georgia,serif;
-  font-size:42px;
+.about h2{
   color:var(--bordo);
-  margin:0 0 10px;
+  font-family:Georgia,serif;
+  font-size:43px;
+  margin:8px 0;
 }
 
-.about-text h3{
-  color:var(--lila);
-}
+.about h3{color:#a45d91}
 
-.about-text p{
-  line-height:1.75;
+.about p{
   color:var(--gris);
+  line-height:1.75;
 }
 
-/* PROCESO */
+/* PASOS */
 
 .steps{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:18px;
+  gap:20px;
 }
 
-.step{
-  text-align:center;
-  padding:25px 18px;
-}
+.step{text-align:center}
 
-.step-number{
+.step-num{
   width:52px;
   height:52px;
+  margin:auto;
+  border-radius:50%;
   display:grid;
   place-items:center;
-  margin:auto;
   background:var(--bordo);
   color:white;
-  border-radius:50%;
-  font-size:20px;
   font-weight:800;
 }
 
-.step h3{
-  color:var(--bordo);
+.step h3{color:var(--bordo)}
+
+.step p{
+  color:var(--gris);
+  line-height:1.6;
 }
 
 /* CONTACTO */
 
 .contact{
   text-align:center;
-  background:#f5e3eb;
+  background:#f3dce6;
 }
 
-.contact-box{
+.contact-inner{
   max-width:760px;
   margin:auto;
 }
 
 .contact h2{
-  font-family:Georgia,serif;
   color:var(--bordo);
+  font-family:Georgia,serif;
   font-size:44px;
-  margin-bottom:15px;
 }
 
 .contact p{
@@ -695,77 +775,133 @@ section.content{
   line-height:1.7;
 }
 
+/* MODAL */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(40,15,28,.72);
+  z-index:9999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.modal.open{display:flex}
+
+.modal-box{
+  position:relative;
+  background:white;
+  width:min(700px,96%);
+  max-height:85vh;
+  overflow:auto;
+  padding:38px;
+  border-radius:25px;
+}
+
+.modal-box h2{
+  color:var(--bordo);
+  font-family:Georgia,serif;
+  font-size:31px;
+}
+
+.modal-box p{
+  color:#5d5157;
+  line-height:1.8;
+}
+
+.close{
+  position:absolute;
+  right:20px;
+  top:15px;
+  background:none;
+  border:0;
+  font-size:30px;
+  color:var(--bordo);
+  cursor:pointer;
+}
+
 /* FOOTER */
 
 footer{
-  background:#452132;
+  background:#400720;
   color:white;
-  padding:32px 0;
   text-align:center;
+  padding:30px 15px;
   font-size:13px;
 }
 
-/* WHATSAPP FLOTANTE */
+/* WHATSAPP */
 
 .whatsapp-float{
   position:fixed;
   right:22px;
   bottom:22px;
-  width:59px;
-  height:59px;
+  z-index:2000;
+  width:60px;
+  height:60px;
   border-radius:50%;
-  background:var(--verde);
-  color:white;
   display:grid;
   place-items:center;
-  font-size:29px;
-  z-index:1500;
+  background:var(--verde);
+  color:white;
+  font-size:27px;
   box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
 /* RESPONSIVE */
 
-@media(max-width:950px){
+@media(max-width:1000px){
+
+  .logo-block{
+    position:relative;
+    left:auto;
+    top:auto;
+    padding-top:20px;
+    margin:auto;
+  }
+
+  .topbar{height:auto}
 
   .nav{
+    height:auto;
+    min-height:70px;
+    padding:15px 0;
     justify-content:center;
     flex-wrap:wrap;
-    gap:15px;
-    padding:14px 0;
+    gap:17px;
   }
 
-  .hero-main{
+  .hero-content{
     grid-template-columns:1fr;
-    padding-top:35px;
+    padding-top:45px;
   }
 
-  .hero h1{
-    font-size:52px;
+  .hero-copy{padding-left:0}
+
+  .hero h1{font-size:58px}
+
+  .hero-scene{
+    width:min(560px,100%);
+    margin:35px auto 0;
   }
 
-  .hero-right{
-    min-height:420px;
-  }
-
-  .hero-services{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .hero-bottom-grid{
+  .band-grid{
     grid-template-columns:1fr;
   }
 
-  .whatsapp-mini{
-    justify-content:flex-start;
+  .band-item + .band-item{
+    border-left:0;
+    border-top:1px solid rgba(255,255,255,.3);
+    padding:18px 0 0;
   }
 
-  .news-track,
-  .cards,
-  .plans{
+  .cards,.plans{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .about-grid{
+  .about{
     grid-template-columns:1fr;
   }
 
@@ -774,144 +910,161 @@ footer{
   }
 }
 
-@media(max-width:620px){
+@media(max-width:650px){
 
-  .main-logo{
-    width:125px;
-    height:125px;
+  .logo-circle{
+    width:190px;
+    height:190px;
   }
 
-  .logo-area{
-    align-items:flex-start;
+  .logo-circle img{
+    width:170px;
+    height:170px;
   }
 
   .hero h1{
-    font-size:42px;
+    font-size:43px;
   }
 
-  .hero-services{
+  .hero-subtitle{font-size:17px}
+
+  .quick-services{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .hero-right{
-    min-height:350px;
+  .hero-scene{
+    transform:scale(.78);
+    transform-origin:top center;
+    margin-bottom:-100px;
   }
 
-  .hero-blob{
-    width:330px;
-    height:330px;
+  .laptop{
+    right:50%;
+    transform:translateX(50%);
   }
 
-  .desk-card{
-    padding:20px;
-    min-height:310px;
+  .script{
+    left:50%;
+    transform:translateX(-50%) rotate(-7deg);
+    width:300px;
   }
 
-  .news-track,
   .cards,
   .plans,
-  .business-grid,
+  .two-cols,
   .steps{
     grid-template-columns:1fr;
   }
 
-  .section-head h2,
-  .about-text h2,
+  .news-card{
+    flex-basis:88vw;
+  }
+
+  .section-heading h2,
+  .about h2,
   .contact h2{
     font-size:34px;
   }
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="container nav">
-    <a href="#inicio">Inicio</a>
-    <a href="#novedades">Novedades</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#empresas">Empresas</a>
-    <a href="#colegas">Colegas</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#contacto">Contacto</a>
-  </div>
-</header>
-
 <!-- PORTADA -->
 
 <section class="hero" id="inicio">
 
-  <div class="container hero-main">
+  <div class="topbar">
+    <div class="container nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#empresas">Empresas</a>
+      <a href="#colegas">Colegas</a>
+      <a href="#novedades">Novedades</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
 
-    <div class="hero-left">
+  <div class="logo-block">
 
-      <div class="logo-area">
-        <img src="logo-js-estudio.png"
-             alt="JS Estudio Contable"
-             class="main-logo">
+    <div class="logo-circle">
+      <img src="logo-js-estudio.png" alt="JS Estudio Contable">
+    </div>
 
-        <div class="logo-copy">
-          Estudio Contable<br>
-          Contabilidad clara<br>
-          Resultados reales
-        </div>
-      </div>
+    <div class="logo-words">
+      <strong>ESTUDIO CONTABLE</strong>
+      <span>CONTABILIDAD CLARA<br>RESULTADOS REALES</span>
+    </div>
 
-      <div class="eyebrow">
-        Contabilidad clara · Atención personalizada
+  </div>
+
+  <div class="container hero-content">
+
+    <div class="leaves">
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+    </div>
+
+    <div class="hero-copy">
+
+      <div class="hero-kicker">
+        CONTABILIDAD CLARA, ATENCIÓN PERSONALIZADA
       </div>
 
       <h1>
         Tu contabilidad<br>
-        en orden.
-        <span>Tu negocio, más claro.</span>
+        en orden.<br>
+        <span class="pink">Tu negocio, más claro.</span>
       </h1>
 
-      <p class="hero-description">
-        Soluciones contables para emprendedores, profesionales,
-        comercios y empresas. Atención personalizada y 100% online
-        en toda Argentina.
-      </p>
+      <div class="hero-subtitle">
+        Soluciones contables para un crecimiento sostenible.
+      </div>
 
-      <div class="hero-services">
+      <div class="quick-services">
 
-        <div class="hero-service">
-          <div class="icon">🧾</div>
+        <div class="quick-item">
+          <div class="quick-icon">▤</div>
           Monotributo<br>e impuestos
         </div>
 
-        <div class="hero-service">
-          <div class="icon">📊</div>
-          Contabilidad y<br>regularizaciones
+        <div class="quick-item">
+          <div class="quick-icon">♙</div>
+          Contabilidad<br>y regularizaciones
         </div>
 
-        <div class="hero-service">
-          <div class="icon">🏢</div>
+        <div class="quick-item">
+          <div class="quick-icon">▥</div>
           Empresas<br>y PyMEs
         </div>
 
-        <div class="hero-service">
-          <div class="icon">🤝</div>
+        <div class="quick-item">
+          <div class="quick-icon">♢</div>
           Servicios<br>para colegas
         </div>
 
-        <div class="hero-service">
-          <div class="icon">💻</div>
+        <div class="quick-item">
+          <div class="quick-icon">▱</div>
           Atención<br>online
         </div>
 
       </div>
 
-      <div class="buttons">
+      <div class="hero-buttons">
 
         <a class="btn btn-primary"
-           href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
-           target="_blank">
-           Quiero hacer una consulta
+           target="_blank"
+           href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta.">
+          ◉ &nbsp; Quiero hacer una consulta
         </a>
 
-        <a class="btn btn-secondary" href="#servicios">
+        <a class="btn btn-outline" href="#servicios">
           Conocé mis servicios →
         </a>
 
@@ -919,158 +1072,85 @@ footer{
 
     </div>
 
-    <div class="hero-right">
+    <!-- ESCENA DERECHA -->
 
-      <div class="hero-blob"></div>
+    <div class="hero-scene">
 
-      <div class="desk-card">
+      <div class="script">
+        Tu proyecto<br>
+        también cuenta ♡
+      </div>
 
-        <div class="handwritten">
-          Tu proyecto también cuenta ♡
-        </div>
+      <div class="plant">
+        <div class="plant-stem"></div>
+        <div class="plant-leaf"></div>
+        <div class="plant-leaf"></div>
+        <div class="plant-leaf"></div>
+        <div class="plant-leaf"></div>
+      </div>
 
-        <div class="screen">
+      <div class="desk"></div>
 
-          <img src="logo-js-estudio.png"
-               alt="JS Estudio Contable">
+      <div class="laptop">
 
-          <h3>Tu contabilidad<br>en orden.</h3>
+        <div class="laptop-screen">
+
+          <img src="logo-js-estudio.png" alt="JS">
+
+          <h3>
+            Tu contabilidad<br>
+            en orden.
+          </h3>
 
           <p>Tu negocio, más claro.</p>
 
-          <span class="screen-button">
-            CONTÁ CONMIGO
-          </span>
+          <span class="mini-button">CONTACTAME</span>
 
         </div>
 
+        <div class="keyboard"></div>
+
+      </div>
+
+      <div class="notebook">
+        Grandes proyectos<br>
+        comienzan con<br>
+        buenos números ♡
       </div>
 
     </div>
 
   </div>
 
-  <div class="hero-bottom">
+  <div class="hero-band">
 
-    <div class="container hero-bottom-grid">
+    <div class="container band-grid">
 
-      <div class="hero-bottom-item">
-        <div class="hero-bottom-icon">🇦🇷</div>
+      <div class="band-item">
+        <div class="argentina">🇦🇷</div>
         <div>
-          <small>ATENCIÓN</small>
-          <strong>100% ONLINE EN TODA ARGENTINA</strong>
+          <strong>ATENCIÓN 100% ONLINE</strong>
+          <span>EN TODA ARGENTINA</span>
         </div>
       </div>
 
-      <div class="hero-bottom-item">
+      <div class="band-item">
         <div>
           <strong>Janet Marysol Saldivia</strong>
-          <small>
-            Contadora Pública Nacional · MP N.º 931 · CPCE Santa Cruz
-          </small>
+          <span>
+            Contadora Pública Nacional<br>
+            MP N.º 931 · CPCE Santa Cruz
+          </span>
         </div>
       </div>
 
-      <div class="hero-bottom-item whatsapp-mini">
-        <a class="whatsapp-pill"
+      <div class="band-item">
+
+        <a class="whatsapp-band"
            target="_blank"
            href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta.">
-          WhatsApp · Consultas
+          ☎ CONSULTAS<br>POR WHATSAPP
         </a>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- NOVEDADES -->
-
-<section class="content news-section" id="novedades">
-
-  <div class="container">
-
-    <div class="section-head">
-      <small>Actualidad contable</small>
-      <h2>Novedades</h2>
-      <p>
-        Información clara y actualizada para ayudarte a tomar
-        mejores decisiones.
-      </p>
-    </div>
-
-    <div class="news-wrapper">
-
-      <div class="news-track">
-
-        <article class="news-card">
-          <div class="news-top">ARCA</div>
-          <div class="news-body">
-            <small>MONOTRIBUTO</small>
-            <h3>Recategorización de Monotributo</h3>
-            <p>
-              Revisá tus parámetros y tu situación fiscal para evitar
-              diferencias o recategorizaciones de oficio.
-            </p>
-            <button class="read-more"
-              onclick="openNews('Recategorización de Monotributo',
-              'La recategorización requiere analizar los parámetros correspondientes al período aplicable. Es importante revisar facturación, actividad y situación fiscal antes de realizar cualquier modificación. Desde JS Estudio Contable puedo analizar tu caso y orientarte sobre los pasos a seguir.')">
-              Leer más →
-            </button>
-          </div>
-        </article>
-
-        <article class="news-card">
-          <div class="news-top">IVA</div>
-          <div class="news-body">
-            <small>IMPUESTOS</small>
-            <h3>Vencimientos y presentaciones</h3>
-            <p>
-              Mantener las declaraciones juradas al día ayuda a evitar
-              intereses, intimaciones e inconsistencias.
-            </p>
-            <button class="read-more"
-              onclick="openNews('Vencimientos y presentaciones',
-              'El cumplimiento de los vencimientos fiscales es fundamental para mantener una situación tributaria ordenada. Cada contribuyente puede tener obligaciones diferentes según su actividad y condición fiscal. Consultá para revisar tu situación particular.')">
-              Leer más →
-            </button>
-          </div>
-        </article>
-
-        <article class="news-card">
-          <div class="news-top">ARCA</div>
-          <div class="news-body">
-            <small>CONTROL FISCAL</small>
-            <h3>Chequeo ARCA 360°</h3>
-            <p>
-              Un control integral permite detectar deudas,
-              incumplimientos y puntos que necesitan atención.
-            </p>
-            <button class="read-more"
-              onclick="openNews('Chequeo ARCA 360°',
-              'El Chequeo ARCA 360° es una revisión general de tu situación fiscal. El objetivo es identificar obligaciones pendientes, inconsistencias y prioridades para que sepas qué está bien, qué requiere atención y cuáles son los próximos pasos.')">
-              Leer más →
-            </button>
-          </div>
-        </article>
-
-        <article class="news-card">
-          <div class="news-top">SUELDOS</div>
-          <div class="news-body">
-            <small>EMPLEADORES</small>
-            <h3>Obligaciones laborales</h3>
-            <p>
-              Liquidaciones, registraciones y presentaciones requieren
-              seguimiento periódico.
-            </p>
-            <button class="read-more"
-              onclick="openNews('Obligaciones laborales',
-              'Los empleadores deben realizar diferentes tareas periódicas relacionadas con liquidaciones, registraciones y presentaciones. Un seguimiento ordenado permite anticiparse a vencimientos y reducir errores administrativos.')">
-              Leer más →
-            </button>
-          </div>
-        </article>
 
       </div>
 
@@ -1082,16 +1162,16 @@ footer{
 
 <!-- SERVICIOS -->
 
-<section class="content alt" id="servicios">
+<section class="section soft" id="servicios">
 
   <div class="container">
 
-    <div class="section-head">
-      <small>Soluciones</small>
+    <div class="section-heading">
+      <small>Soluciones pensadas para vos</small>
       <h2>¿Qué te está pasando?</h2>
       <p>
-        No necesitás conocer el nombre del trámite.
-        Contame tu situación y analizamos qué necesitás.
+        No necesitás saber qué trámite pedir. Contame tu situación
+        y vemos cuál es el servicio adecuado.
       </p>
     </div>
 
@@ -1101,8 +1181,8 @@ footer{
         <div class="card-icon">🧯</div>
         <h3>Rescate Fiscal</h3>
         <p>
-          Si tenés deuda y no sabés de dónde salió, revisamos
-          tu situación y ordenamos las prioridades.
+          ¿Tenés deuda y no sabés de dónde salió?
+          Revisamos tu situación y ordenamos las prioridades.
         </p>
       </div>
 
@@ -1110,8 +1190,8 @@ footer{
         <div class="card-icon">🔎</div>
         <h3>Chequeo ARCA 360°</h3>
         <p>
-          Revisión integral para saber qué está bien,
-          qué necesita atención y cómo seguir.
+          Para saber qué está bien, qué requiere atención
+          y cuáles son los próximos pasos.
         </p>
       </div>
 
@@ -1119,8 +1199,8 @@ footer{
         <div class="card-icon">🔄</div>
         <h3>Cambio de Contador Seguro</h3>
         <p>
-          Ordenamos la transición y revisamos la situación
-          para comenzar la nueva etapa con claridad.
+          Revisamos tu situación y organizamos una transición
+          clara y ordenada.
         </p>
       </div>
 
@@ -1128,22 +1208,22 @@ footer{
         <div class="card-icon">💬</div>
         <h3>Segunda Opinión Contable</h3>
         <p>
-          Si ya tenés contador pero necesitás otra mirada profesional
-          sobre un tema puntual.
+          ¿Ya tenés contador pero querés otra opinión?
+          Analizamos un tema puntual con una mirada independiente.
         </p>
       </div>
 
       <div class="card">
-        <div class="card-icon">📈</div>
+        <div class="card-icon">📊</div>
         <h3>Radiografía de tu Negocio</h3>
         <p>
-          Para quienes venden y trabajan, pero necesitan entender
-          mejor sus números y resultados.
+          Para entender mejor tus números y tener una visión
+          más clara de tu actividad.
         </p>
       </div>
 
       <div class="card">
-        <div class="card-icon">🧾</div>
+        <div class="card-icon">✓</div>
         <h3>Gestión Contable</h3>
         <p>
           Monotributo, impuestos, facturación electrónica,
@@ -1159,22 +1239,21 @@ footer{
 
 <!-- EMPRESAS -->
 
-<section class="content business" id="empresas">
+<section class="section dark" id="empresas">
 
   <div class="container">
 
-    <div class="section-head">
+    <div class="section-heading">
       <small>Empresas</small>
       <h2>Tu área contable, sin incorporarla a tu estructura</h2>
       <p>
-        Acompañamiento profesional remoto para empresas y PyMEs
-        que necesitan organización, seguimiento y soporte.
+        Acompañamiento profesional remoto para empresas y PyMEs.
       </p>
     </div>
 
-    <div class="business-grid">
+    <div class="two-cols">
 
-      <div class="business-card">
+      <div class="dark-card">
         <h3>Back Office Contable</h3>
         <p>
           Soporte administrativo-contable, registraciones,
@@ -1182,11 +1261,11 @@ footer{
         </p>
       </div>
 
-      <div class="business-card">
+      <div class="dark-card">
         <h3>Empresas y PyMEs</h3>
         <p>
-          Una mirada profesional para acompañar la gestión
-          y mantener la información contable organizada.
+          Organización, seguimiento y soporte para mantener
+          la información contable ordenada.
         </p>
       </div>
 
@@ -1198,25 +1277,24 @@ footer{
 
 <!-- COLEGAS -->
 
-<section class="content" id="colegas">
+<section class="section" id="colegas">
 
   <div class="container">
 
-    <div class="section-head">
+    <div class="section-heading">
       <small>Para colegas</small>
       <h2>¿Sos contador/a y necesitás una mano?</h2>
       <p>
-        Apoyo profesional remoto y confidencial para estudios
-        contables que necesitan reforzar su capacidad de trabajo.
+        Apoyo profesional remoto para estudios contables,
+        con confidencialidad y respeto por la relación con sus clientes.
       </p>
     </div>
 
     <div class="card">
       <h3>CONTADORA ON DEMAND</h3>
       <p>
-        Colaboración profesional para tareas contables,
-        impositivas y administrativas, respetando la relación
-        del estudio con sus clientes y manteniendo confidencialidad.
+        Colaboración en tareas contables, impositivas y administrativas
+        cuando tu estudio necesita capacidad adicional.
       </p>
 
       <a class="btn btn-primary"
@@ -1230,18 +1308,114 @@ footer{
 
 </section>
 
-<!-- PLANES -->
+<!-- NOVEDADES -->
 
-<section class="content alt">
+<section class="section soft" id="novedades">
 
   <div class="container">
 
-    <div class="section-head">
+    <div class="section-heading">
+      <small>Información útil</small>
+      <h2>Novedades</h2>
+      <p>
+        Temas contables e impositivos explicados de manera clara.
+        Deslizá las tarjetas y tocá “Leer más” para abrir cada nota.
+      </p>
+    </div>
+
+    <div class="news-shell">
+
+      <div class="news-track" id="newsTrack">
+
+        <article class="news-card">
+          <div class="news-cover">Monotributo</div>
+          <div class="news-body">
+           <small>21/09/2026 · Fuente: ARCA</small>
+            <h3>Recategorización de Monotributo</h3>
+            <p>
+              Qué conviene revisar antes de realizar
+              una recategorización.
+            </p>
+            <button class="read"
+              onclick="openNews('Recategorización de Monotributo','Antes de realizar una recategorización es importante analizar los parámetros correspondientes al período aplicable y revisar la situación fiscal del contribuyente. Una revisión previa permite detectar inconsistencias y definir correctamente los pasos a seguir. Cada caso debe analizarse según su actividad y situación particular.')">
+              Leer más →
+            </button>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-cover">ARCA 360°</div>
+          <div class="news-body">
+           <small>21/09/2026 · JS Estudio Contable</small>
+            <h3>¿Está todo bien en ARCA?</h3>
+            <p>
+              Una revisión integral puede ayudarte a detectar
+              pendientes antes de que se conviertan en un problema.
+            </p>
+            <button class="read"
+              onclick="openNews('Chequeo ARCA 360°','El Chequeo ARCA 360° consiste en una revisión general de la situación fiscal para identificar obligaciones pendientes, inconsistencias y aspectos que necesitan atención. El objetivo es que puedas conocer tu situación con claridad y establecer prioridades y próximos pasos.')">
+              Leer más →
+            </button>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-cover">Facturación</div>
+          <div class="news-body">
+            <small>21/09/2026 · JS Estudio Contable</small>
+            <h3>Facturación electrónica</h3>
+            <p>
+              Facturar correctamente también forma parte
+              de una gestión ordenada.
+            </p>
+            <button class="read"
+              onclick="openNews('Facturación electrónica','La facturación debe guardar relación con la actividad y la condición fiscal de cada contribuyente. Además de emitir comprobantes, es conveniente controlar periódicamente la información registrada y mantener organizada la documentación respaldatoria.')">
+              Leer más →
+            </button>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-cover">Empresas</div>
+          <div class="news-body">
+            <small>21/09/2026 · JS Estudio Contable</small>
+            <h3>Ordenar también es gestionar</h3>
+            <p>
+              Tener información clara permite tomar decisiones
+              con una mejor visión del negocio.
+            </p>
+            <button class="read"
+              onclick="openNews('Ordenar también es gestionar','Una buena organización contable no se limita al cumplimiento de obligaciones. Contar con documentación, registros e información ordenada facilita el seguimiento de la actividad y aporta elementos para tomar decisiones con mayor claridad.')">
+              Leer más →
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="news-arrows">
+        <button class="arrow" onclick="moveNews(-1)">←</button>
+        <button class="arrow" onclick="moveNews(1)">→</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PLANES -->
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-heading">
       <small>Acompañamiento</small>
       <h2>Planes según tu necesidad</h2>
       <p>
-        La propuesta se define según tu actividad,
-        obligaciones y nivel de acompañamiento.
+        Sin precios genéricos: cada propuesta se adapta
+        a la actividad y necesidades del cliente.
       </p>
     </div>
 
@@ -1251,8 +1425,8 @@ footer{
         <h3>Plan Monotributo</h3>
         <ul>
           <li>Seguimiento fiscal</li>
-          <li>Facturación y consultas</li>
           <li>Control de situación</li>
+          <li>Facturación y consultas</li>
           <li>Recategorizaciones</li>
         </ul>
       </div>
@@ -1279,7 +1453,7 @@ footer{
 
     </div>
 
-    <div class="buttons">
+    <div style="margin-top:28px">
       <a class="btn btn-primary"
          target="_blank"
          href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20quisiera%20solicitar%20una%20propuesta%20de%20servicios.">
@@ -1293,18 +1467,20 @@ footer{
 
 <!-- SOBRE MI -->
 
-<section class="content" id="sobre-mi">
+<section class="section soft" id="sobre-mi">
 
-  <div class="container about-grid">
+  <div class="container about">
 
     <div class="about-photo">
       <img src="janet-saldivia.jpg"
-           alt="Janet Marysol Saldivia - Contadora Pública">
+           alt="Janet Marysol Saldivia">
     </div>
 
-    <div class="about-text">
+    <div>
 
-      <div class="eyebrow">Detrás del estudio</div>
+      <div class="section-heading" style="margin-bottom:0">
+        <small>Detrás del estudio</small>
+      </div>
 
       <h2>Janet Marysol Saldivia</h2>
 
@@ -1316,15 +1492,13 @@ footer{
       </p>
 
       <p>
-        Desde El Calafate brindo atención profesional 100% online
-        para clientes de todo el país, buscando que cada persona
-        pueda comprender su situación contable y tomar decisiones
-        con mayor claridad.
+        Desde El Calafate brindo atención personalizada y 100% online
+        para clientes de todo el país.
       </p>
 
       <p>
-        Mi forma de trabajo combina atención personalizada,
-        seguimiento y comunicación clara.
+        Mi objetivo es que puedas comprender tu situación contable,
+        ordenar tus obligaciones y tomar decisiones con mayor claridad.
       </p>
 
     </div>
@@ -1335,11 +1509,11 @@ footer{
 
 <!-- COMO TRABAJAMOS -->
 
-<section class="content alt">
+<section class="section">
 
   <div class="container">
 
-    <div class="section-head">
+    <div class="section-heading">
       <small>Simple y seguro</small>
       <h2>Cómo trabajamos</h2>
     </div>
@@ -1347,25 +1521,25 @@ footer{
     <div class="steps">
 
       <div class="step">
-        <div class="step-number">1</div>
+        <div class="step-num">1</div>
         <h3>Me contás tu situación</h3>
-        <p>Empezamos por entender qué necesitás.</p>
+        <p>Primero entendemos qué necesitás.</p>
       </div>
 
       <div class="step">
-        <div class="step-number">2</div>
+        <div class="step-num">2</div>
         <h3>Analizo el caso</h3>
         <p>Reviso la información necesaria.</p>
       </div>
 
       <div class="step">
-        <div class="step-number">3</div>
+        <div class="step-num">3</div>
         <h3>Te explico las opciones</h3>
-        <p>Con lenguaje claro y prioridades.</p>
+        <p>Con claridad y prioridades.</p>
       </div>
 
       <div class="step">
-        <div class="step-number">4</div>
+        <div class="step-num">4</div>
         <h3>Avanzamos</h3>
         <p>
           Trabajamos mediante autorizaciones seguras.
@@ -1381,11 +1555,9 @@ footer{
 
 <!-- CONTACTO -->
 
-<section class="content contact" id="contacto">
+<section class="section contact" id="contacto">
 
-  <div class="container contact-box">
-
-    <div class="eyebrow">JS Estudio Contable</div>
+  <div class="container contact-inner">
 
     <h2>No necesitás saber qué trámite pedir.</h2>
 
@@ -1394,26 +1566,20 @@ footer{
       el servicio adecuado para tu situación.
     </p>
 
-    <div class="buttons" style="justify-content:center">
-
-      <a class="btn btn-primary"
-         target="_blank"
-         href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta.">
-        Hablar por WhatsApp
-      </a>
-
-    </div>
+    <a class="btn btn-primary"
+       target="_blank"
+       href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta.">
+      Hablar por WhatsApp
+    </a>
 
   </div>
 
 </section>
 
 <footer>
-  <div class="container">
-    JS Estudio Contable · Janet Marysol Saldivia ·
-    Contadora Pública Nacional · El Calafate, Santa Cruz ·
-    Atención online en toda Argentina
-  </div>
+  JS Estudio Contable · Janet Marysol Saldivia ·
+  Contadora Pública Nacional · MP N.º 931 · CPCE Santa Cruz ·
+  El Calafate · Atención online en toda Argentina
 </footer>
 
 <!-- WHATSAPP FLOTANTE -->
@@ -1425,16 +1591,13 @@ footer{
   ☎
 </a>
 
-<!-- VENTANA PARA LEER NOVEDADES -->
+<!-- MODAL NOVEDADES -->
 
 <div class="modal" id="newsModal">
 
   <div class="modal-box">
 
-    <button class="close-modal"
-            onclick="closeNews()">×</button>
-
-    <div class="eyebrow">Novedades</div>
+    <button class="close" onclick="closeNews()">×</button>
 
     <h2 id="modalTitle"></h2>
 
@@ -1459,16 +1622,30 @@ function closeNews(){
 }
 
 document.getElementById("newsModal").addEventListener("click",function(e){
-  if(e.target===this){
-    closeNews();
-  }
+  if(e.target===this) closeNews();
 });
 
 document.addEventListener("keydown",function(e){
-  if(e.key==="Escape"){
-    closeNews();
-  }
+  if(e.key==="Escape") closeNews();
 });
+
+function moveNews(direction){
+  const track=document.getElementById("newsTrack");
+  track.scrollBy({
+    left:direction*380,
+    behavior:"smooth"
+  });
+}
+
+let autoNews=setInterval(function(){
+  const track=document.getElementById("newsTrack");
+
+  if(track.scrollLeft+track.clientWidth>=track.scrollWidth-20){
+    track.scrollTo({left:0,behavior:"smooth"});
+  }else{
+    track.scrollBy({left:380,behavior:"smooth"});
+  }
+},5500);
 
 </script>
 
