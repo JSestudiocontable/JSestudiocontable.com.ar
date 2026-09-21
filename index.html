@@ -1072,7 +1072,275 @@ header nav a{
     font-size:13px;
   }
 } 
-</style>
+/* ===== NOVEDADES GRANDES ===== */
+
+.novedades{
+  padding:75px 0 90px;
+  background:#fffafb;
+}
+
+.news-new{
+  width:94%;
+  max-width:1400px;
+  margin:0 auto;
+}
+
+.news-new-head{
+  margin-bottom:35px;
+}
+
+.news-new-head small{
+  color:#a887b7;
+  font-weight:800;
+  letter-spacing:2px;
+  font-size:13px;
+}
+
+.news-new-head h2{
+  color:#71334f;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:46px;
+  margin:7px 0 8px;
+}
+
+.news-new-head p{
+  color:#65535d;
+  font-size:17px;
+  margin:0;
+}
+
+.news-slider{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.news-track{
+  display:flex;
+  gap:24px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+  width:100%;
+  padding:8px 4px 25px;
+}
+
+.news-track::-webkit-scrollbar{
+  display:none;
+}
+
+.news-card-new{
+  flex:0 0 calc((100% - 48px)/3);
+  min-width:0;
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 28px rgba(88,21,47,.12);
+  border:1px solid #f0dce5;
+}
+
+.news-card-top{
+  height:135px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#71334f,#a887b7);
+  color:#fff;
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.news-card-body{
+  padding:27px 27px 30px;
+}
+
+.news-date{
+  display:block;
+  color:#a887b7;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.news-card-body h3{
+  color:#71334f;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:25px;
+  line-height:1.15;
+  margin:0 0 13px;
+}
+
+.news-card-body p{
+  color:#65535d;
+  font-size:15px;
+  line-height:1.6;
+  min-height:72px;
+}
+
+.news-read{
+  margin-top:12px;
+  border:0;
+  background:transparent;
+  color:#71334f;
+  font-size:15px;
+  font-weight:800;
+  cursor:pointer;
+  padding:0;
+}
+
+.news-read:hover{
+  color:#c98aa6;
+}
+
+.news-arrow{
+  position:absolute;
+  z-index:5;
+  width:48px;
+  height:48px;
+  border:0;
+  border-radius:50%;
+  background:#71334f;
+  color:#fff;
+  font-size:32px;
+  cursor:pointer;
+  box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.news-prev{
+  left:-24px;
+}
+
+.news-next{
+  right:-24px;
+}
+
+/* VENTANA DE LECTURA */
+
+.news-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:rgba(45,27,36,.72);
+  padding:30px;
+  overflow-y:auto;
+}
+
+.news-modal.active{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.news-modal-box{
+  position:relative;
+  width:min(760px,95%);
+  max-height:90vh;
+  overflow-y:auto;
+  background:#fffafb;
+  border-radius:22px;
+  padding:45px;
+  box-shadow:0 25px 70px rgba(0,0,0,.3);
+}
+
+.news-close{
+  position:absolute;
+  top:15px;
+  right:18px;
+  width:38px;
+  height:38px;
+  border:0;
+  border-radius:50%;
+  background:#71334f;
+  color:#fff;
+  font-size:26px;
+  cursor:pointer;
+}
+
+.news-full{
+  display:none;
+}
+
+.news-full.active{
+  display:block;
+}
+
+.news-modal-label{
+  color:#a887b7;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+.news-full h2{
+  color:#71334f;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:36px;
+  margin:10px 0 20px;
+}
+
+.news-full p{
+  color:#55454d;
+  font-size:16px;
+  line-height:1.75;
+}
+
+.news-consult{
+  display:inline-block;
+  margin-top:15px;
+  background:#71334f;
+  color:white;
+  text-decoration:none;
+  border-radius:28px;
+  padding:14px 22px;
+  font-weight:700;
+}
+
+/* CELULAR */
+
+@media(max-width:850px){
+
+  .novedades{
+    padding:55px 0 65px;
+  }
+
+  .news-new{
+    width:88%;
+  }
+
+  .news-new-head h2{
+    font-size:38px;
+  }
+
+  .news-card-new{
+    flex:0 0 100%;
+  }
+
+  .news-card-top{
+    height:115px;
+  }
+
+  .news-prev{
+    left:-20px;
+  }
+
+  .news-next{
+    right:-20px;
+  }
+
+  .news-modal{
+    padding:15px;
+  }
+
+  .news-modal-box{
+    padding:40px 25px 30px;
+  }
+
+  .news-full h2{
+    font-size:29px;
+  }
+}</style>
 
 </head>
 
@@ -1154,283 +1422,222 @@ header nav a{
           <span>Atención<br>online</span>
         </div>
 
-      </div>
+      <section class="novedades" id="novedades">
 
-      <div class="hero-buttons">
+  <div class="container news-new">
 
-        <a class="btn primary"
-           href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
-           target="_blank">
-          Quiero hacer una consulta
-        </a>
-
-        <a class="btn secondary" href="#servicios">
-          Conocé mis servicios →
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <div class="hero-right">
-
-      <div class="hero-handwritten">
-        Tu proyecto<br>
-        también cuenta ♡
-      </div>
-
-      <div class="desk-scene">
-
-        <div class="hero-laptop">
-
-          <div class="hero-laptop-screen">
-
-            <img src="logo-js-estudio.png"
-                 alt=""
-                 class="screen-logo">
-
-            <div class="screen-title">
-              Tu contabilidad<br>
-              en orden.
-            </div>
-
-            <div class="screen-subtitle">
-              Tu negocio, más claro.
-            </div>
-
-            <div class="screen-text">
-              Soluciones contables para un crecimiento sostenible
-            </div>
-
-            <span class="screen-button">
-              CONTACTAME
-            </span>
-
-          </div>
-
-          <div class="hero-laptop-base"></div>
-
-        </div>
-
-        <div class="desk-book"></div>
-        <div class="desk-pen"></div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div class="hero-bottom">
-
-    <div class="hero-bottom-item">
-      <strong>ARGENTINA</strong>
-      <span>ATENCIÓN 100% ONLINE<br>EN TODO EL PAÍS</span>
-    </div>
-
-    <div class="hero-bottom-item hero-professional">
-      <strong>Janet Marysol Saldivia</strong>
-      <span>Contadora Pública Nacional</span>
-      <small>MP N.º 931 · CPCE Santa Cruz</small>
-    </div>
-
-    <div class="hero-bottom-item">
-      <strong>JS ESTUDIO CONTABLE</strong>
-      <span>Seguime en redes</span>
-    </div>
-
-    <a class="hero-whatsapp"
-       href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
-       target="_blank">
-      WHATSAPP · CONSULTAS
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- NOVEDADES -->
-
-<section class="novedades" id="novedades">
-
-<div class="container">
-
-  <div class="news-head">
-
-    <div class="section-title" style="margin:0">
-      <small>Actualidad contable</small>
+    <div class="news-new-head">
+      <small>ACTUALIDAD CONTABLE</small>
       <h2>Novedades</h2>
       <p>
-        Información clara y actualizada para que tomes mejores decisiones.
+        Información clara y actualizada sobre temas contables,
+        impositivos y de gestión.
       </p>
     </div>
 
-  </div>
+    <div class="news-slider">
 
+      <button class="news-arrow news-prev"
+              type="button"
+              onclick="moveNewsNew(-1)"
+              aria-label="Novedad anterior">‹</button>
 
-  <div class="carousel-wrap">
+      <div class="news-track" id="newsTrackNew">
 
-    <button class="arrow prev"
-            onclick="moveNews(-1)"
-            aria-label="Novedad anterior">‹</button>
+        <!-- NOVEDAD 1 -->
+        <article class="news-card-new">
+          <div class="news-card-top">ARCA</div>
+          <div class="news-card-body">
+            <span class="news-date">Septiembre 2026</span>
+            <h3>Recategorización de Monotributo</h3>
+            <p>
+              Revisá tu situación fiscal y evitá diferencias,
+              deudas o recategorizaciones de oficio.
+            </p>
+            <button type="button"
+                    class="news-read"
+                    onclick="openNewsNew('news1')">
+              Leer más →
+            </button>
+          </div>
+        </article>
 
-    <div class="carousel" id="newsCarousel">
+        <!-- NOVEDAD 2 -->
+        <article class="news-card-new">
+          <div class="news-card-top">FACTURACIÓN</div>
+          <div class="news-card-body">
+            <span class="news-date">Septiembre 2026</span>
+            <h3>Facturación electrónica</h3>
+            <p>
+              Qué revisar para emitir comprobantes correctamente
+              y mantener ordenada tu registración.
+            </p>
+            <button type="button"
+                    class="news-read"
+                    onclick="openNewsNew('news2')">
+              Leer más →
+            </button>
+          </div>
+        </article>
 
+        <!-- NOVEDAD 3 -->
+        <article class="news-card-new">
+          <div class="news-card-top">ARCA 360°</div>
+          <div class="news-card-body">
+            <span class="news-date">Septiembre 2026</span>
+            <h3>Chequeo ARCA 360°</h3>
+            <p>
+              Un control integral para conocer el estado de tu
+              situación fiscal y detectar pendientes.
+            </p>
+            <button type="button"
+                    class="news-read"
+                    onclick="openNewsNew('news3')">
+              Leer más →
+            </button>
+          </div>
+        </article>
 
-      <article class="news-card">
+        <!-- NOVEDAD 4 -->
+        <article class="news-card-new">
+          <div class="news-card-top">IMPUESTOS</div>
+          <div class="news-card-body">
+            <span class="news-date">Septiembre 2026</span>
+            <h3>Agenda fiscal</h3>
+            <p>
+              Recordatorios y vencimientos importantes para
+              organizar tus obligaciones.
+            </p>
+            <button type="button"
+                    class="news-read"
+                    onclick="openNewsNew('news4')">
+              Leer más →
+            </button>
+          </div>
+        </article>
 
-        <div class="news-image">ARCA</div>
+      </div>
 
-        <div class="news-content">
-
-          <span class="news-date">
-            SEPTIEMBRE 2026
-          </span>
-
-          <h3>
-            Ganancias: novedades y vencimientos
-          </h3>
-
-          <p>
-            Información importante sobre presentaciones,
-            obligaciones y fechas a tener en cuenta.
-          </p>
-
-          <span class="read">
-            Leer más →
-          </span>
-
-        </div>
-
-      </article>
-
-
-      <article class="news-card">
-
-        <div class="news-image">📅</div>
-
-        <div class="news-content">
-
-          <span class="news-date">
-            SEPTIEMBRE 2026
-          </span>
-
-          <h3>
-            Agenda de vencimientos
-          </h3>
-
-          <p>
-            IVA, F.931, Monotributo, Autónomos y
-            principales obligaciones del mes.
-          </p>
-
-          <span class="read">
-            Leer más →
-          </span>
-
-        </div>
-
-      </article>
-
-
-      <article class="news-card">
-
-        <div class="news-image">ARCA</div>
-
-        <div class="news-content">
-
-          <span class="news-date">
-            ACTUALIDAD
-          </span>
-
-          <h3>
-            Recategorización de Monotributo
-          </h3>
-
-          <p>
-            Qué revisar y qué tener en cuenta para
-            mantener correctamente tu situación fiscal.
-          </p>
-
-          <span class="read">
-            Leer más →
-          </span>
-
-        </div>
-
-      </article>
-
-
-      <article class="news-card">
-
-        <div class="news-image">▤</div>
-
-        <div class="news-content">
-
-          <span class="news-date">
-            INFORMACIÓN
-          </span>
-
-          <h3>
-            Facturación electrónica
-          </h3>
-
-          <p>
-            Recomendaciones para evitar errores
-            y mantener tu facturación ordenada.
-          </p>
-
-          <span class="read">
-            Leer más →
-          </span>
-
-        </div>
-
-      </article>
-
-
-      <article class="news-card">
-
-        <div class="news-image">360°</div>
-
-        <div class="news-content">
-
-          <span class="news-date">
-            SERVICIOS
-          </span>
-
-          <h3>
-            Chequeo ARCA 360°
-          </h3>
-
-          <p>
-            Una revisión profesional para conocer
-            el estado de tu situación fiscal.
-          </p>
-
-          <span class="read">
-            Leer más →
-          </span>
-
-        </div>
-
-      </article>
+      <button class="news-arrow news-next"
+              type="button"
+              onclick="moveNewsNew(1)"
+              aria-label="Novedad siguiente">›</button>
 
     </div>
 
+  </div>
 
-    <button class="arrow next"
-            onclick="moveNews(1)"
-            aria-label="Novedad siguiente">›</button>
+
+  <!-- VENTANA PARA LEER LA NOVEDAD COMPLETA -->
+  <div class="news-modal" id="newsModalNew">
+
+    <div class="news-modal-box">
+
+      <button type="button"
+              class="news-close"
+              onclick="closeNewsNew()"
+              aria-label="Cerrar">
+        ×
+      </button>
+
+      <div class="news-full" id="news1">
+        <span class="news-modal-label">ARCA · MONOTRIBUTO</span>
+        <h2>Recategorización de Monotributo</h2>
+        <p>
+          La recategorización permite revisar si la categoría actual
+          del monotributista continúa siendo la correcta de acuerdo
+          con los parámetros aplicables.
+        </p>
+        <p>
+          Es importante controlar la facturación, la actividad
+          declarada y la situación registrada ante ARCA para detectar
+          posibles diferencias antes de que generen inconvenientes.
+        </p>
+        <p>
+          En JS Estudio Contable analizamos cada situación de manera
+          personalizada y te indicamos los pasos a seguir.
+        </p>
+        <a class="news-consult"
+           href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20quisiera%20consultar%20sobre%20Monotributo."
+           target="_blank">
+          Consultar por WhatsApp
+        </a>
+      </div>
+
+      <div class="news-full" id="news2">
+        <span class="news-modal-label">FACTURACIÓN</span>
+        <h2>Facturación electrónica</h2>
+        <p>
+          Emitir comprobantes correctamente es una parte fundamental
+          del orden fiscal de cualquier actividad.
+        </p>
+        <p>
+          Conviene verificar los puntos de venta habilitados, el tipo
+          de comprobante utilizado, la actividad declarada y la
+          registración de las operaciones.
+        </p>
+        <p>
+          Si tenés dudas sobre tu facturación, podemos revisar tu
+          situación y ayudarte a regularizarla.
+        </p>
+        <a class="news-consult"
+           href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20quisiera%20consultar%20sobre%20facturaci%C3%B3n%20electr%C3%B3nica."
+           target="_blank">
+          Consultar por WhatsApp
+        </a>
+      </div>
+
+      <div class="news-full" id="news3">
+        <span class="news-modal-label">SERVICIO PROFESIONAL</span>
+        <h2>Chequeo ARCA 360°</h2>
+        <p>
+          El Chequeo ARCA 360° es una revisión integral de la situación
+          fiscal para detectar obligaciones pendientes, inconsistencias
+          y aspectos que conviene corregir.
+        </p>
+        <p>
+          El objetivo es que conozcas claramente qué está bien,
+          qué requiere atención y cuáles son los próximos pasos.
+        </p>
+        <p>
+          Al finalizar recibís una devolución organizada con las
+          prioridades detectadas.
+        </p>
+        <a class="news-consult"
+           href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20quisiera%20consultar%20por%20el%20Chequeo%20ARCA%20360."
+           target="_blank">
+          Consultar por WhatsApp
+        </a>
+      </div>
+
+      <div class="news-full" id="news4">
+        <span class="news-modal-label">AGENDA FISCAL</span>
+        <h2>Organizá tus vencimientos</h2>
+        <p>
+          Llevar una agenda de vencimientos ayuda a anticipar
+          obligaciones y evitar presentaciones o pagos fuera de término.
+        </p>
+        <p>
+          Monotributo, IVA, cargas sociales, autónomos y otras
+          obligaciones tienen calendarios que deben controlarse
+          según cada contribuyente.
+        </p>
+        <p>
+          Una buena organización fiscal permite trabajar con mayor
+          previsibilidad durante el mes.
+        </p>
+        <a class="news-consult"
+           href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20quisiera%20realizar%20una%20consulta%20contable."
+           target="_blank">
+          Consultar por WhatsApp
+        </a>
+      </div>
+
+    </div>
 
   </div>
 
-</div>
 </section>
-
 
 <!-- SERVICIOS -->
 
@@ -1781,6 +1988,46 @@ setInterval(function(){
 },5000);
 
 </script>
+<script>
+document.querySelectorAll('.news-card').forEach(function(card){
+  card.style.cursor = 'pointer';
 
+  card.addEventListener('click', function(){
+    var titulo = card.querySelector('h3');
+    var texto = card.querySelector('p');
+
+    var fondo = document.createElement('div');
+    fondo.style.cssText =
+      'position:fixed;inset:0;background:rgba(45,25,35,.72);z-index:99999;' +
+      'display:flex;align-items:center;justify-content:center;padding:20px;';
+
+    var ventana = document.createElement('div');
+    ventana.style.cssText =
+      'background:#fff9fb;width:min(650px,95%);max-height:85vh;overflow:auto;' +
+      'border-radius:24px;padding:35px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.25);';
+
+    ventana.innerHTML =
+      '<button style="position:absolute;right:18px;top:14px;border:0;background:none;font-size:28px;cursor:pointer;color:#71334f;">×</button>' +
+      '<div style="color:#71334f;font-size:13px;font-weight:700;text-transform:uppercase;margin-bottom:10px;">Novedades</div>' +
+      '<h2 style="color:#71334f;margin:0 35px 18px 0;font-size:30px;">' +
+      (titulo ? titulo.innerHTML : 'Novedad contable') +
+      '</h2>' +
+      '<div style="font-size:17px;line-height:1.7;color:#382c34;">' +
+      (texto ? texto.innerHTML : 'Próximamente más información.') +
+      '</div>';
+
+    fondo.appendChild(ventana);
+    document.body.appendChild(fondo);
+
+    ventana.querySelector('button').onclick = function(){
+      fondo.remove();
+    };
+
+    fondo.onclick = function(e){
+      if(e.target === fondo) fondo.remove();
+    };
+  });
+});
+</script>
 </body>
 </html>
