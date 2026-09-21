@@ -337,6 +337,73 @@ footer a{
   .steps{grid-template-columns:1fr}
   .brand small{display:none}
 }
+
+/* NOTEBOOK DE PORTADA */
+  .hero-visual{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.laptop{
+  width:100%;
+  max-width:500px;
+  background:#71334f;
+  padding:12px 12px 18px;
+  border-radius:18px 18px 8px 8px;
+  box-shadow:0 25px 50px rgba(70,35,52,.22);
+}
+
+.laptop-screen{
+  background:#fffafc;
+  min-height:310px;
+  border-radius:10px;
+  padding:28px 24px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.laptop-logo{
+  width:145px;
+  max-height:145px;
+  object-fit:contain;
+  margin-bottom:12px;
+}
+
+.laptop-title{
+  color:#71334f;
+  font-size:22px;
+  font-weight:800;
+}
+
+.laptop-subtitle{
+  color:#8a6577;
+  margin:5px 0 18px;
+  font-size:14px;
+}
+
+.laptop-services{
+  width:100%;
+  display:grid;
+  gap:7px;
+  color:#71334f;
+  font-size:14px;
+}
+
+.laptop-base{
+  width:112%;
+  height:14px;
+  background:#c98aa6;
+  margin-left:-6%;
+  margin-bottom:-28px;
+  margin-top:12px;
+  border-radius:3px 3px 14px 14px;
+}
+
 </style>
 </head>
 
@@ -401,26 +468,26 @@ footer a{
         Atención online · Honorarios claros · Seguimiento profesional
       </div>
     </div>
+    <div class="hero-visual">
+  <div class="laptop">
+    <div class="laptop-screen">
+      <img src="logo-js-estudio.png" alt="JS Estudio Contable" class="laptop-logo">
 
-    <div class="hero-brand">
-      <img src="logo-js-estudio.png"
-           alt="JS Estudio Contable"
-           class="hero-logo">
+      <div class="laptop-title">JS ESTUDIO CONTABLE</div>
+      <div class="laptop-subtitle">CP Janet Marysol Saldivia</div>
 
-      <div class="hero-services">
-        <div>📄<strong>Monotributo e impuestos</strong></div>
-        <div>🧾<strong>Facturación y regularizaciones</strong></div>
-        <div>🏢<strong>Empresas y PyMEs</strong></div>
-        <div>🤝<strong>Servicios para colegas</strong></div>
+      <div class="laptop-services">
+        <span>Monotributo e impuestos</span>
+        <span>Facturación y regularizaciones</span>
+        <span>Empresas y PyMEs</span>
+        <span>Servicios para colegas</span>
       </div>
-
-      <p class="hero-signature">
-        Janet Marysol Saldivia<br>
-        <strong>Contadora Pública Nacional</strong>
-      </p>
     </div>
-
+    <div class="laptop-base"></div>
   </div>
+</div>
+
+
 </section>
 
   <section id="soluciones" class="alt">
