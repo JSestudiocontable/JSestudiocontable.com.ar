@@ -46,441 +46,532 @@ img{max-width:100%;display:block}
    PORTADA
 ========================= */
 
+/* ===== PORTADA JS ESTUDIO CONTABLE ===== */
+
 .hero{
   position:relative;
-  background:
-    radial-gradient(circle at 72% 40%,rgba(239,198,216,.55),transparent 38%),
-    linear-gradient(105deg,#fffafa 0%,#fff4f7 56%,#f5dfe8 100%);
+  width:100%;
+  background:#fff7f8;
   overflow:hidden;
+  color:#3d3035;
 }
 
 /* BARRA SUPERIOR */
-
 .topbar{
-  height:84px;
+  min-height:84px;
   background:linear-gradient(90deg,#570927,#7b103d);
-  position:relative;
-  z-index:10;
-}
-
-.nav{
-  height:84px;
   display:flex;
   align-items:center;
-  justify-content:flex-end;
-  gap:34px;
-  padding-left:310px;
+  position:relative;
+  z-index:5;
 }
 
-.nav a{
-  color:white;
-  font-size:15px;
-  font-weight:600;
-  transition:.2s;
+.hero-nav{
+  width:min(1080px,92%);
+  margin:0 auto;
+  padding-left:240px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:32px;
 }
 
-.nav a:hover{
-  opacity:.72;
+.hero-nav a{
+  color:#fff;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:500;
+  white-space:nowrap;
 }
 
-/* LOGO GRANDE */
-
-.logo-block{
-  position:absolute;
-  z-index:30;
-  left:max(4%,calc((100% - 1180px)/2));
-  top:12px;
-  width:270px;
-  text-align:center;
-}
-
-.logo-circle{
-  width:245px;
-  height:245px;
-  margin:auto;
-  border-radius:50%;
-  background:#fffafa;
-  display:grid;
-  place-items:center;
-  border:1px solid rgba(111,13,54,.3);
-  box-shadow:0 8px 25px rgba(80,15,45,.08);
-}
-
-.logo-circle img{
-  width:215px;
-  height:215px;
-  object-fit:contain;
-}
-
-.logo-words{
-  margin-top:-2px;
-  color:#111;
-}
-
-.logo-words strong{
-  display:block;
-  font-family:Georgia,serif;
-  font-size:25px;
-  letter-spacing:.5px;
-  border-bottom:2px solid var(--bordo);
-  padding-bottom:4px;
-}
-
-.logo-words span{
-  display:block;
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:4px;
-  line-height:1.5;
-  margin-top:8px;
+.hero-nav a:first-child{
+  background:#f8dce8;
+  color:#570927;
+  padding:11px 23px;
+  border-radius:30px;
 }
 
 /* CUERPO DE PORTADA */
-
-.hero-content{
-  min-height:720px;
-  display:grid;
-  grid-template-columns:56% 44%;
-  align-items:center;
+.hero-main{
   position:relative;
-  padding-top:175px;
-  padding-bottom:80px;
+  min-height:690px;
+  background:
+    radial-gradient(circle at 82% 30%,rgba(233,190,209,.45),transparent 30%),
+    linear-gradient(105deg,#fffafa 0%,#fff5f7 56%,#f7e5eb 100%);
+  padding:155px max(6vw,50px) 70px;
 }
 
-/* HOJAS */
-
-.leaves{
+/* ÚNICO LOGO */
+.hero-logo{
   position:absolute;
-  left:-110px;
-  top:280px;
-  width:210px;
-  height:390px;
-  opacity:.65;
+  z-index:8;
+  top:-70px;
+  left:max(5vw,55px);
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 30px rgba(85,9,40,.13);
 }
 
-.leaf{
-  position:absolute;
-  width:115px;
-  height:45px;
-  border-radius:100% 0 100% 0;
-  background:linear-gradient(90deg,#e5a4c1,#c65c8a);
-  transform:rotate(-30deg);
+.hero-logo img{
+  width:94%;
+  height:94%;
+  object-fit:contain;
+  border-radius:50%;
 }
 
-.leaf:nth-child(1){top:0;left:35px}
-.leaf:nth-child(2){top:70px;left:70px;transform:rotate(-8deg)}
-.leaf:nth-child(3){top:145px;left:25px;transform:rotate(-35deg)}
-.leaf:nth-child(4){top:220px;left:75px;transform:rotate(-5deg)}
-.leaf:nth-child(5){top:295px;left:30px;transform:rotate(-32deg)}
-
-/* TEXTO */
+/* DISTRIBUCIÓN PRINCIPAL */
+.hero-content{
+  width:min(1380px,100%);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(390px,.92fr);
+  align-items:center;
+  gap:45px;
+}
 
 .hero-copy{
   position:relative;
-  z-index:5;
-  padding-left:40px;
+  z-index:2;
 }
 
-.hero-kicker{
-  font-size:15px;
-  font-weight:700;
+.hero-eyebrow{
+  margin:0 0 16px;
+  color:#332b2f;
+  font-size:17px;
   letter-spacing:3px;
-  margin-bottom:17px;
+  font-weight:600;
 }
 
 .hero h1{
   margin:0;
   font-family:Georgia,"Times New Roman",serif;
-  font-size:70px;
-  line-height:.96;
-  color:var(--bordo);
+  font-size:clamp(55px,5.3vw,82px);
+  line-height:.94;
   letter-spacing:-2px;
+  color:#65082f;
+  font-weight:700;
 }
 
-.hero h1 .pink{
-  color:#c15d89;
+.hero h1 span{
+  color:#c75d8d;
 }
 
 .hero-subtitle{
-  margin:19px 0 24px;
-  font-size:21px;
-  color:#4f474b;
+  margin:22px 0 30px;
+  font-size:22px;
+  line-height:1.4;
+  color:#5b5558;
 }
 
-/* SERVICIOS PORTADA */
-
-.quick-services{
+/* CINCO SERVICIOS */
+.hero-services{
   display:grid;
   grid-template-columns:repeat(5,1fr);
-  gap:14px;
-  margin-top:28px;
-  max-width:720px;
+  gap:15px;
+  max-width:790px;
+  margin-top:20px;
 }
 
-.quick-item{
+.hero-service{
   text-align:center;
-  font-size:13px;
-  font-weight:700;
-  line-height:1.3;
+  font-size:15px;
+  line-height:1.25;
+  color:#282126;
 }
 
-.quick-icon{
-  width:58px;
-  height:58px;
+.hero-service b{
+  width:64px;
+  height:64px;
+  margin:0 auto 10px;
   border-radius:50%;
-  margin:0 auto 9px;
-  background:#f1cadb;
-  color:var(--bordo);
-  display:grid;
-  place-items:center;
-  font-size:26px;
+  background:#f5d6e3;
+  color:#790d40;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:29px;
 }
 
 /* BOTONES */
-
 .hero-buttons{
   display:flex;
-  gap:15px;
   flex-wrap:wrap;
-  margin-top:28px;
+  gap:16px;
+  margin-top:30px;
 }
 
-.btn{
-  min-height:50px;
-  padding:0 25px;
-  border-radius:28px;
+.hero-primary,
+.hero-secondary{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  font-size:14px;
-  font-weight:800;
-  transition:.2s;
+  min-height:56px;
+  padding:0 27px;
+  border-radius:32px;
+  text-decoration:none;
+  font-size:17px;
+  font-weight:700;
 }
 
-.btn-primary{
-  background:linear-gradient(90deg,#7b103d,#9c2255);
-  color:white;
+.hero-primary{
+  background:linear-gradient(90deg,#75103d,#b03e74);
+  color:#fff;
+  box-shadow:0 10px 24px rgba(103,12,51,.18);
 }
 
-.btn-outline{
-  border:2px solid var(--bordo);
-  color:var(--bordo);
-  background:#fff9fb;
+.hero-secondary{
+  border:2px solid #72113c;
+  color:#72113c;
+  background:rgba(255,255,255,.6);
 }
 
-.btn:hover{transform:translateY(-2px)}
-
-/* ESCENA DERECHA */
-
-.hero-scene{
-  height:560px;
+/* SECTOR DERECHO */
+.hero-workspace{
+  min-height:500px;
   position:relative;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
 }
 
-.script{
+.project-note{
   position:absolute;
-  top:5px;
-  left:30px;
-  z-index:5;
-  color:#8d2853;
-  font-family:"Brush Script MT","Segoe Script",cursive;
+  top:-70px;
+  left:8%;
+  z-index:3;
+  color:#a52861;
+  font-family:"Segoe Script","Brush Script MT",cursive;
   font-size:37px;
-  line-height:.95;
-  transform:rotate(-7deg);
-}
-
-/* PLANTA */
-
-.plant{
-  position:absolute;
-  right:-15px;
-  top:35px;
-  width:230px;
-  height:260px;
-  opacity:.72;
-  filter:blur(1px);
-}
-
-.plant-stem{
-  width:5px;
-  height:210px;
-  background:#758c64;
-  position:absolute;
-  left:110px;
-  top:30px;
-  transform:rotate(13deg);
-}
-
-.plant-leaf{
-  position:absolute;
-  width:90px;
-  height:45px;
-  border-radius:100% 0 100% 0;
-  background:#81966f;
-}
-
-.plant-leaf:nth-child(2){top:25px;left:110px;transform:rotate(15deg)}
-.plant-leaf:nth-child(3){top:80px;left:55px;transform:rotate(180deg)}
-.plant-leaf:nth-child(4){top:120px;left:125px;transform:rotate(25deg)}
-.plant-leaf:nth-child(5){top:170px;left:55px;transform:rotate(175deg)}
-
-/* NOTEBOOK */
-
-.laptop{
-  position:absolute;
-  z-index:4;
-  width:500px;
-  right:-5px;
-  top:145px;
-}
-
-.laptop-screen{
-  width:430px;
-  height:275px;
-  margin:auto;
-  border:13px solid #28252a;
-  border-radius:16px 16px 8px 8px;
-  background:linear-gradient(135deg,#fff8fb,#f4dce7);
-  padding:22px 27px;
-  box-shadow:0 18px 35px rgba(55,25,40,.18);
-}
-
-.laptop-screen img{
-  width:78px;
-  margin-bottom:8px;
-}
-
-.laptop-screen h3{
-  font-family:Georgia,serif;
-  font-size:29px;
-  line-height:1;
-  color:var(--bordo);
-  margin:5px 0 9px;
-}
-
-.laptop-screen p{
-  font-size:14px;
-  margin:0 0 15px;
-}
-
-.mini-button{
-  display:inline-block;
-  background:var(--bordo);
-  color:white;
-  border-radius:18px;
-  padding:8px 18px;
-  font-size:11px;
-}
-
-.keyboard{
-  height:38px;
-  width:500px;
-  background:linear-gradient(#d4d1d3,#a7a3a6);
-  clip-path:polygon(8% 0,92% 0,100% 100%,0 100%);
-  border-radius:0 0 15px 15px;
-  box-shadow:0 12px 18px rgba(0,0,0,.18);
-}
-
-/* CUADERNO */
-
-.notebook{
-  position:absolute;
-  z-index:7;
-  width:185px;
-  height:125px;
-  right:-10px;
-  bottom:15px;
-  background:#fff9f7;
-  transform:rotate(7deg);
-  box-shadow:0 10px 25px rgba(0,0,0,.15);
-  padding:25px 18px;
-  font-family:"Brush Script MT","Segoe Script",cursive;
-  font-size:21px;
-  color:#7d244b;
+  line-height:1.05;
+  transform:rotate(-5deg);
   text-align:center;
 }
 
-/* MESA */
+.desk-scene{
+  position:relative;
+  width:100%;
+  height:450px;
+  border-radius:46% 46% 12px 12px;
+  background:
+    radial-gradient(circle at 80% 24%,rgba(92,125,79,.26) 0 7%,transparent 8%),
+    radial-gradient(circle at 89% 34%,rgba(92,125,79,.22) 0 8%,transparent 9%),
+    linear-gradient(to bottom,#f6e9eb 0 70%,#ead4d4 70% 100%);
+  box-shadow:0 22px 55px rgba(86,39,54,.13);
+}
 
-.desk{
+.plant{
   position:absolute;
-  bottom:-30px;
-  left:-80px;
-  right:-150px;
-  height:155px;
-  background:linear-gradient(#ead8d2,#d9c3bd);
-  transform:skewY(2deg);
-  z-index:1;
+  border-radius:50% 0 50% 0;
+  background:#738367;
+  opacity:.35;
+  filter:blur(2px);
+}
+
+.plant-one{
+  width:90px;
+  height:170px;
+  right:35px;
+  top:25px;
+  transform:rotate(25deg);
+}
+
+.plant-two{
+  width:75px;
+  height:145px;
+  right:105px;
+  top:50px;
+  transform:rotate(-25deg);
+}
+
+/* NOTEBOOK */
+.computer{
+  position:absolute;
+  left:5%;
+  right:8%;
+  bottom:72px;
+  z-index:2;
+}
+
+.computer-screen{
+  width:76%;
+  min-height:275px;
+  margin:auto;
+  border:13px solid #29262a;
+  border-radius:16px 16px 7px 7px;
+  background:#fff7f8;
+  padding:28px;
+  box-sizing:border-box;
+  box-shadow:0 18px 32px rgba(0,0,0,.2);
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+.computer-screen img{
+  width:115px;
+  height:115px;
+  object-fit:contain;
+  margin-bottom:5px;
+}
+
+.computer-screen strong{
+  font-family:Georgia,"Times New Roman",serif;
+  color:#62082e;
+  font-size:28px;
+  line-height:1;
+}
+
+.computer-screen span{
+  margin-top:6px;
+  color:#c05d88;
+  font-size:20px;
+  font-weight:700;
+}
+
+.computer-screen small{
+  margin-top:18px;
+  color:#6d5861;
+  font-style:italic;
+}
+
+.computer-base{
+  width:94%;
+  height:30px;
+  margin:auto;
+  background:linear-gradient(#d9d7d7,#a9a7a8);
+  clip-path:polygon(7% 0,93% 0,100% 100%,0 100%);
+  border-radius:0 0 16px 16px;
+}
+
+.desk-note{
+  position:absolute;
+  z-index:4;
+  right:0;
+  bottom:18px;
+  width:180px;
+  padding:22px 12px;
+  background:#fff7f5;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+  transform:rotate(4deg);
+  text-align:center;
+  color:#a12d60;
+  font-family:"Segoe Script","Brush Script MT",cursive;
+  font-size:19px;
+  line-height:1.35;
 }
 
 /* FRANJA INFERIOR */
-
 .hero-band{
   position:relative;
-  z-index:20;
-  margin-top:-18px;
-  background:linear-gradient(90deg,#570927,#7d103d);
-  color:white;
-  padding:31px 0;
-}
-
-.hero-band:before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:-32px;
-  width:100%;
-  height:45px;
-  background:#7d103d;
-  clip-path:polygon(0 35%,15% 75%,31% 42%,48% 72%,65% 38%,82% 65%,100% 25%,100% 100%,0 100%);
-}
-
-.band-grid{
+  z-index:4;
+  background:linear-gradient(90deg,#570927,#861345);
+  color:#fff;
+  min-height:130px;
+  padding:25px max(5vw,45px);
   display:grid;
-  grid-template-columns:1.05fr 1.45fr .8fr;
+  grid-template-columns:1fr 1.4fr 1fr 1fr;
   align-items:center;
-  gap:28px;
+  gap:20px;
 }
 
-.band-item{
-  min-height:62px;
+.hero-band-item{
+  min-height:72px;
+  padding:0 20px;
   display:flex;
-  align-items:center;
-  gap:15px;
+  flex-direction:column;
+  justify-content:center;
+  border-right:1px solid rgba(255,255,255,.45);
 }
 
-.band-item + .band-item{
-  border-left:1px solid rgba(255,255,255,.5);
-  padding-left:35px;
+.hero-band-item:last-child{
+  border-right:0;
 }
 
-.argentina{
-  font-size:43px;
+.hero-band-item strong{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:22px;
 }
 
-.band-item strong{
-  display:block;
-  font-size:16px;
+.hero-band-item span{
+  font-size:15px;
+  line-height:1.45;
 }
 
-.band-item span{
-  display:block;
-  margin-top:5px;
+.hero-band-item small{
+  margin-top:4px;
   font-size:13px;
-  opacity:.92;
+  opacity:.9;
 }
 
-.whatsapp-band{
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-  background:#fff1f6;
-  color:var(--bordo);
-  padding:14px 18px;
-  border-radius:28px;
+.hero-whatsapp{
+  background:#fff0f5;
+  color:#5e0b30;
+  text-decoration:none;
+  border-radius:35px;
+  padding:13px 20px;
   font-weight:800;
+  text-align:center;
 }
 
+/* TABLET */
+@media(max-width:1050px){
+
+  .hero-nav{
+    padding-left:0;
+    gap:18px;
+    flex-wrap:wrap;
+    padding-top:15px;
+    padding-bottom:15px;
+  }
+
+  .hero-logo{
+    width:205px;
+    height:205px;
+    left:30px;
+    top:20px;
+  }
+
+  .hero-main{
+    padding-top:250px;
+  }
+
+  .hero-content{
+    grid-template-columns:1fr;
+  }
+
+  .hero-workspace{
+    min-height:480px;
+  }
+
+  .hero-services{
+    grid-template-columns:repeat(5,1fr);
+  }
+
+  .hero-band{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* CELULAR */
+@media(max-width:700px){
+
+  .topbar{
+    min-height:auto;
+  }
+
+  .hero-nav{
+    padding:13px 15px;
+    gap:12px;
+  }
+
+  .hero-nav a{
+    font-size:13px;
+  }
+
+  .hero-logo{
+    width:160px;
+    height:160px;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+  }
+
+  .hero-main{
+    padding:210px 22px 45px;
+  }
+
+  .hero-eyebrow{
+    font-size:13px;
+    letter-spacing:1.5px;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:48px;
+    text-align:center;
+  }
+
+  .hero-subtitle{
+    font-size:18px;
+    text-align:center;
+  }
+
+  .hero-services{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hero-service:last-child{
+    grid-column:1 / -1;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-primary,
+  .hero-secondary{
+    width:100%;
+  }
+
+  .project-note{
+    position:relative;
+    top:auto;
+    left:auto;
+    margin:10px auto 25px;
+    font-size:30px;
+  }
+
+  .hero-workspace{
+    display:block;
+    min-height:auto;
+    margin-top:35px;
+  }
+
+  .desk-scene{
+    height:390px;
+  }
+
+  .computer-screen{
+    min-height:235px;
+    padding:20px;
+  }
+
+  .computer-screen img{
+    width:80px;
+    height:80px;
+  }
+
+  .computer-screen strong{
+    font-size:22px;
+  }
+
+  .desk-note{
+    width:135px;
+    font-size:15px;
+  }
+
+  .hero-band{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:25px 20px;
+  }
+
+  .hero-band-item{
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.3);
+    padding:15px;
+  }
+
+  .hero-band-item:last-child{
+    border-bottom:0;
+  }
+}
 /* =========================
    RESTO DE LA WEB
 ========================= */
@@ -974,10 +1065,11 @@ footer{
 
 <!-- PORTADA -->
 
+<!-- PORTADA -->
 <section class="hero" id="inicio">
 
   <div class="topbar">
-    <div class="container nav">
+    <nav class="hero-nav">
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
       <a href="#empresas">Empresas</a>
@@ -985,181 +1077,134 @@ footer{
       <a href="#novedades">Novedades</a>
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#contacto">Contacto</a>
-    </div>
+    </nav>
   </div>
 
-  <div class="logo-block">
+  <div class="hero-main">
 
-    <div class="logo-circle">
+    <!-- ÚNICO LOGO -->
+    <div class="hero-logo">
       <img src="logo-js-estudio.png" alt="JS Estudio Contable">
     </div>
 
-    <div class="logo-words">
-      <strong>ESTUDIO CONTABLE</strong>
-      <span>CONTABILIDAD CLARA<br>RESULTADOS REALES</span>
-    </div>
+    <div class="hero-content">
 
-  </div>
+      <div class="hero-copy">
+        <p class="hero-eyebrow">
+          CONTABILIDAD CLARA, ATENCIÓN PERSONALIZADA
+        </p>
 
-  <div class="container hero-content">
+        <h1>
+          Tu contabilidad<br>
+          en orden.<br>
+          <span>Tu negocio, más claro.</span>
+        </h1>
 
-    <div class="leaves">
-      <div class="leaf"></div>
-      <div class="leaf"></div>
-      <div class="leaf"></div>
-      <div class="leaf"></div>
-      <div class="leaf"></div>
-    </div>
+        <p class="hero-subtitle">
+          Soluciones contables para un crecimiento sostenible.
+        </p>
 
-    <div class="hero-copy">
+        <div class="hero-services">
 
-      <div class="hero-kicker">
-        CONTABILIDAD CLARA, ATENCIÓN PERSONALIZADA
-      </div>
+          <div class="hero-service">
+            <b>▣</b>
+            <span>Monotributo<br>e impuestos</span>
+          </div>
 
-      <h1>
-        Tu contabilidad<br>
-        en orden.<br>
-        <span class="pink">Tu negocio, más claro.</span>
-      </h1>
+          <div class="hero-service">
+            <b>◎</b>
+            <span>Contabilidad<br>y regularizaciones</span>
+          </div>
 
-      <div class="hero-subtitle">
-        Soluciones contables para un crecimiento sostenible.
-      </div>
+          <div class="hero-service">
+            <b>▦</b>
+            <span>Empresas<br>y PyMEs</span>
+          </div>
 
-      <div class="quick-services">
+          <div class="hero-service">
+            <b>◇</b>
+            <span>Servicios<br>para colegas</span>
+          </div>
 
-        <div class="quick-item">
-          <div class="quick-icon">▤</div>
-          Monotributo<br>e impuestos
-        </div>
-
-        <div class="quick-item">
-          <div class="quick-icon">♙</div>
-          Contabilidad<br>y regularizaciones
-        </div>
-
-        <div class="quick-item">
-          <div class="quick-icon">▥</div>
-          Empresas<br>y PyMEs
-        </div>
-
-        <div class="quick-item">
-          <div class="quick-icon">♢</div>
-          Servicios<br>para colegas
-        </div>
-
-        <div class="quick-item">
-          <div class="quick-icon">▱</div>
-          Atención<br>online
-        </div>
-
-      </div>
-
-      <div class="hero-buttons">
-
-        <a class="btn btn-primary"
-           target="_blank"
-           href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta.">
-          ◉ &nbsp; Quiero hacer una consulta
-        </a>
-
-        <a class="btn btn-outline" href="#servicios">
-          Conocé mis servicios →
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- ESCENA DERECHA -->
-
-    <div class="hero-scene">
-
-      <div class="script">
-        Tu proyecto<br>
-        también cuenta ♡
-      </div>
-
-      <div class="plant">
-        <div class="plant-stem"></div>
-        <div class="plant-leaf"></div>
-        <div class="plant-leaf"></div>
-        <div class="plant-leaf"></div>
-        <div class="plant-leaf"></div>
-      </div>
-
-      <div class="desk"></div>
-
-      <div class="laptop">
-
-        <div class="laptop-screen">
-
-          <img src="logo-js-estudio.png" alt="JS">
-
-          <h3>
-            Tu contabilidad<br>
-            en orden.
-          </h3>
-
-          <p>Tu negocio, más claro.</p>
-
-          <span class="mini-button">CONTACTAME</span>
+          <div class="hero-service">
+            <b>▱</b>
+            <span>Atención<br>online</span>
+          </div>
 
         </div>
 
-        <div class="keyboard"></div>
+        <div class="hero-buttons">
+          <a class="hero-primary"
+             href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
+             target="_blank">
+             ◉ Quiero hacer una consulta
+          </a>
 
+          <a class="hero-secondary" href="#servicios">
+            Conocé mis servicios →
+          </a>
+        </div>
       </div>
 
-      <div class="notebook">
-        Grandes proyectos<br>
-        comienzan con<br>
-        buenos números ♡
+      <div class="hero-workspace">
+        <div class="project-note">
+          Tu proyecto<br>también cuenta ♡
+        </div>
+
+        <div class="desk-scene">
+          <div class="plant plant-one"></div>
+          <div class="plant plant-two"></div>
+
+          <div class="computer">
+            <div class="computer-screen">
+              <img src="logo-js-estudio.png" alt="JS Estudio Contable">
+              <strong>Tu contabilidad<br>en orden.</strong>
+              <span>Tu negocio, más claro.</span>
+              <small>Planificar · Organizar · Crecer</small>
+            </div>
+            <div class="computer-base"></div>
+          </div>
+
+          <div class="desk-note">
+            Grandes proyectos<br>
+            comienzan con<br>
+            buenos números ♡
+          </div>
+        </div>
       </div>
 
     </div>
-
   </div>
 
   <div class="hero-band">
 
-    <div class="container band-grid">
+    <div class="hero-band-item">
+      <strong>ARGENTINA</strong>
+      <span>ATENCIÓN 100% ONLINE<br>EN TODO EL PAÍS</span>
+    </div>
 
-      <div class="band-item">
-        <div class="argentina">🇦🇷</div>
-        <div>
-          <strong>ATENCIÓN 100% ONLINE</strong>
-          <span>EN TODA ARGENTINA</span>
-        </div>
-      </div>
+    <div class="hero-band-item hero-person">
+      <strong>Janet Marysol Saldivia</strong>
+      <span>Contadora Pública Nacional</span>
+      <small>MP N.º 931 · CPCE Santa Cruz</small>
+    </div>
 
-      <div class="band-item">
-        <div>
-          <strong>Janet Marysol Saldivia</strong>
-          <span>
-            Contadora Pública Nacional<br>
-            MP N.º 931 · CPCE Santa Cruz
-          </span>
-        </div>
-      </div>
+    <div class="hero-band-item">
+      <span>JS ESTUDIO CONTABLE</span>
+      <small>Contabilidad clara · Resultados reales</small>
+    </div>
 
-      <div class="band-item">
-
-        <a class="whatsapp-band"
-           target="_blank"
-           href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta.">
-          ☎ CONSULTAS<br>POR WHATSAPP
-        </a>
-
-      </div>
-
+    <div class="hero-band-item">
+      <a class="hero-whatsapp"
+         href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
+         target="_blank">
+         ☎ CONSULTAS<br>POR WHATSAPP
+      </a>
     </div>
 
   </div>
 
 </section>
-
 <!-- SERVICIOS -->
 
 <section class="section soft" id="servicios">
