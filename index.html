@@ -6,980 +6,1396 @@
 
 <title>JS Estudio Contable | Janet Marysol Saldivia</title>
 
-<meta name="description" content="Estudio contable online. Asesoramiento impositivo y contable para emprendedores, profesionales, PyMEs y empresas en toda Argentina.">
+<meta name="description" content="JS Estudio Contable. Contadora Pública Janet Marysol Saldivia. Atención online en toda Argentina. Impuestos, contabilidad, empresas, PyMEs y servicios para colegas.">
 
 <style>
 :root{
   --bordo:#71334f;
+  --bordo-oscuro:#58152f;
   --rosa:#c98aa6;
+  --rosa-claro:#f5dce7;
   --lila:#a887b7;
-  --claro:#faf7f9;
+  --fondo:#fff9fb;
   --texto:#382c34;
   --blanco:#ffffff;
   --verde:#25D366;
 }
 
-*{box-sizing:border-box}
-
-html{scroll-behavior:smooth}
-
-body{
+*{
+  box-sizing:border-box;
   margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--texto);
-  background:var(--claro);
-  line-height:1.6;
+  padding:0;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--texto);
+  background:var(--fondo);
+  line-height:1.55;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* CABECERA */
+
 header{
-  background:linear-gradient(90deg,#54263d,#71334f,#76558c);
+  background:linear-gradient(90deg,#59152f,#7b2047);
   color:white;
   position:sticky;
   top:0;
   z-index:100;
+  box-shadow:0 3px 15px rgba(0,0,0,.12);
 }
 
 .nav{
-  max-width:1150px;
-  margin:auto;
-  padding:14px 22px;
+  min-height:78px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:20px;
+  gap:25px;
 }
 
 .brand{
   display:flex;
   align-items:center;
   gap:12px;
+  font-weight:700;
 }
 
 .brand img{
-  width:100px;
-  height:100px;
+  width:60px;
+  height:60px;
   object-fit:contain;
-  border-radius:50%;
   background:white;
+  border-radius:50%;
 }
 
-.brand strong{
-  display:block;
-  font-size:22px;
+nav{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  font-size:15px;
 }
-
-.brand small{opacity:.9}
 
 nav a{
   color:white;
-  text-decoration:none;
-  margin-left:18px;
-  font-size:14px;
 }
+
+nav a:hover{
+  color:#ffdbe9;
+}
+
+/* PORTADA */
 
 .hero{
-  min-height:700px;
-  display:flex;
-  align-items:center;
+  position:relative;
+  overflow:hidden;
   background:
-    radial-gradient(circle at 82% 28%, rgba(201,138,166,.28), transparent 32%),
-    radial-gradient(circle at 12% 75%, rgba(168,135,183,.18), transparent 30%),
-    linear-gradient(135deg,#fffafc 0%,#f9eef4 48%,#eadbea 100%);
+    radial-gradient(circle at 80% 20%,#f7dce7 0,transparent 32%),
+    linear-gradient(135deg,#fffafd,#fff3f7);
+  padding:55px 0 45px;
 }
 
-.container{
-  max-width:1150px;
-  margin:auto;
-  padding:80px 22px;
+.hero:before{
+  content:"";
+  position:absolute;
+  width:330px;
+  height:330px;
+  border-radius:50%;
+  background:#f3cada;
+  opacity:.28;
+  left:-180px;
+  top:180px;
 }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
+  grid-template-columns:1.05fr .95fr;
+  gap:45px;
   align-items:center;
+  position:relative;
+  z-index:2;
+}
+
+.hero-left{
+  position:relative;
+}
+
+.hero-logo{
+  width:250px;
+  max-width:70%;
+  display:block;
+  margin-bottom:28px;
 }
 
 .eyebrow{
   color:var(--bordo);
   text-transform:uppercase;
-  letter-spacing:2px;
+  letter-spacing:3px;
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.hero h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:64px;
+  line-height:.98;
+  color:var(--bordo-oscuro);
+  max-width:680px;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  color:var(--rosa);
+}
+
+.hero-subtitle{
+  font-size:21px;
+  margin-bottom:28px;
+  max-width:630px;
+}
+
+.service-icons{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+  margin:30px 0;
+}
+
+.service-item{
+  text-align:center;
   font-size:13px;
-  font-weight:bold;
 }
 
-h1{
-  font-size:56px;
-  line-height:1.05;
-  margin:15px 0 22px;
-}
-
-h2{
-  font-size:38px;
-  line-height:1.15;
-  margin:0 0 18px;
-}
-
-h3{
-  margin-top:0;
+.icon-circle{
+  width:62px;
+  height:62px;
+  margin:0 auto 9px;
+  border-radius:50%;
+  background:#f5d4e2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   color:var(--bordo);
-}
-
-.lead{
-  font-size:19px;
-  max-width:700px;
-}
-
-.hero-logo{
-  width:100%;
-  max-width:720px;
-  display:block;
-  margin:auto;
-  border-radius:0;
-  box-shadow:0 18px 45px rgba(73,38,55,.14);
+  font-size:28px;
 }
 
 .buttons{
   display:flex;
-  gap:12px;
+  gap:15px;
   flex-wrap:wrap;
-  margin-top:28px;
+  margin-top:24px;
 }
 
 .btn{
-  display:inline-block;
-  padding:13px 21px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:bold;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 24px;
+  border-radius:30px;
+  font-weight:700;
+  transition:.2s;
 }
 
-.primary{
+.btn-primary{
+  color:white;
+  background:linear-gradient(90deg,#7b1743,#9d3866);
+}
+
+.btn-secondary{
+  border:1.5px solid var(--bordo);
+  color:var(--bordo);
+  background:white;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+/* NOTEBOOK */
+
+.hero-right{
+  position:relative;
+}
+
+.phrase{
+  font-family:Georgia,"Times New Roman",serif;
+  font-style:italic;
+  color:#a43e69;
+  font-size:29px;
+  text-align:center;
+  margin-bottom:12px;
+  transform:rotate(-3deg);
+}
+
+.desk{
+  padding:28px 12px 20px;
+  position:relative;
+}
+
+.laptop{
+  max-width:570px;
+  margin:auto;
+  background:#272328;
+  padding:14px 14px 25px;
+  border-radius:17px 17px 8px 8px;
+  box-shadow:0 24px 45px rgba(76,27,50,.25);
+  transform:perspective(900px) rotateY(-4deg);
+}
+
+.screen{
+  min-height:315px;
+  background:
+    linear-gradient(rgba(255,250,252,.92),rgba(255,250,252,.92)),
+    linear-gradient(135deg,#fff,#f6dce6);
+  border-radius:5px;
+  padding:28px;
+  text-align:left;
+}
+
+.screen img{
+  width:105px;
+  display:block;
+  margin-bottom:20px;
+}
+
+.screen h3{
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--bordo-oscuro);
+  font-size:35px;
+  line-height:1;
+  margin-bottom:15px;
+}
+
+.screen h3 span{
+  color:var(--rosa);
+}
+
+.screen p{
+  margin-bottom:18px;
+}
+
+.screen-button{
+  display:inline-block;
   background:var(--bordo);
   color:white;
+  padding:9px 20px;
+  border-radius:22px;
+  font-size:13px;
 }
 
-.secondary{
-  color:var(--bordo);
-  border:1px solid var(--bordo);
+.laptop-base{
+  height:18px;
+  width:112%;
+  background:linear-gradient(#c8c3c6,#8c888c);
+  margin-left:-6%;
+  margin-top:13px;
+  border-radius:3px 3px 18px 18px;
 }
 
 .trust{
-  margin-top:32px;
-  font-size:14px;
-  font-weight:bold;
-  color:#6f5b66;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:36px;
+  border-top:1px solid #ead3dc;
+  padding-top:22px;
 }
 
-section{background:white}
+.trust div{
+  font-size:14px;
+  font-weight:600;
+}
 
-.alt{background:#f6f0f4}
+/* SECCIONES */
+
+section{
+  padding:75px 0;
+}
 
 .section-title{
-  text-align:center;
-  max-width:760px;
-  margin:0 auto 45px;
+  margin-bottom:35px;
+}
+
+.section-title small{
+  text-transform:uppercase;
+  letter-spacing:2px;
+  color:var(--rosa);
+  font-weight:bold;
+}
+
+.section-title h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:43px;
+  color:var(--bordo-oscuro);
+  margin-top:5px;
+}
+
+.section-title p{
+  max-width:700px;
+  color:#6c6066;
+  margin-top:8px;
+}
+
+/* NOVEDADES */
+
+.novedades{
+  background:white;
+}
+
+.news-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:28px;
+}
+
+.carousel-wrap{
+  position:relative;
+}
+
+.carousel{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+  padding:5px 2px 18px;
+}
+
+.carousel::-webkit-scrollbar{
+  display:none;
+}
+
+.news-card{
+  min-width:310px;
+  max-width:310px;
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(70,30,50,.10);
+  border:1px solid #f0e1e7;
+}
+
+.news-image{
+  height:135px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:36px;
+  font-weight:bold;
+  color:white;
+  background:linear-gradient(135deg,var(--bordo),var(--rosa));
+}
+
+.news-content{
+  padding:20px;
+}
+
+.news-date{
+  display:inline-block;
+  background:#f4d7e3;
+  color:var(--bordo);
+  padding:5px 9px;
+  border-radius:5px;
+  font-size:11px;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+.news-card h3{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:21px;
+  color:var(--bordo-oscuro);
+  margin-bottom:9px;
+}
+
+.news-card p{
+  font-size:14px;
+  color:#685c62;
+}
+
+.read{
+  display:inline-block;
+  margin-top:14px;
+  color:#a42f62;
+  font-weight:bold;
+}
+
+.arrow{
+  position:absolute;
+  top:44%;
+  width:46px;
+  height:46px;
+  border:0;
+  border-radius:50%;
+  background:var(--bordo);
+  color:white;
+  font-size:24px;
+  cursor:pointer;
+  z-index:5;
+}
+
+.prev{
+  left:-22px;
+}
+
+.next{
+  right:-22px;
+}
+
+/* SOLUCIONES */
+
+.alt{
+  background:#fcf2f6;
 }
 
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  gap:22px;
 }
 
 .card{
   background:white;
-  padding:27px;
-  border-radius:20px;
-  box-shadow:0 8px 28px rgba(65,39,52,.07);
-  border:1px solid #eee4e9;
+  border-radius:17px;
+  padding:28px;
+  box-shadow:0 7px 22px rgba(79,32,53,.08);
+  border:1px solid #f0dfe6;
+}
+
+.card h3{
+  color:var(--bordo);
+  margin:8px 0 10px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:23px;
 }
 
 .problem{
+  font-size:14px;
   font-weight:bold;
-  font-size:18px;
-  color:#44323c;
-  margin-bottom:10px;
+  color:#a05a78;
 }
 
-.feature{
-  border-top:5px solid var(--rosa);
-}
+/* EMPRESAS */
 
-.dark{
-  background:linear-gradient(135deg,#51283c,#71334f);
+.company{
+  background:linear-gradient(135deg,#611b39,#813055);
   color:white;
 }
 
-.dark h2,.dark h3{color:white}
-
-.dark .card{
-  background:rgba(255,255,255,.09);
-  border-color:rgba(255,255,255,.16);
+.company .section-title h2,
+.company .section-title small{
   color:white;
 }
 
-.badge{
-  display:inline-block;
-  padding:7px 12px;
-  border-radius:999px;
-  background:#efe3ea;
+.company .section-title p{
+  color:#f7dfe9;
+}
+
+.company-box{
+  background:rgba(255,255,255,.10);
+  padding:32px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.22);
+}
+
+.company-box h3{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:32px;
+  margin-bottom:12px;
+}
+
+/* COLEGAS */
+
+.colegas{
+  background:#f1e8f4;
+}
+
+.tags{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:20px 0;
+}
+
+.tag{
+  padding:8px 14px;
+  border-radius:20px;
+  background:white;
   color:var(--bordo);
-  font-weight:bold;
-  font-size:13px;
+  font-size:14px;
 }
 
-.semaforo{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-  margin-top:30px;
-}
+/* SOBRE MI */
 
-.light-card{
-  background:#fff;
-  border-radius:18px;
-  padding:22px;
-  color:var(--texto);
-}
-
-.about{
+.about-grid{
   display:grid;
   grid-template-columns:.75fr 1.25fr;
   gap:50px;
   align-items:center;
 }
 
-.about img{
+.about-photo{
   width:100%;
-  max-width:360px;
-  border-radius:26px;
-  display:block;
-  margin:auto;
-  box-shadow:0 15px 40px rgba(60,35,47,.15);
+  max-width:370px;
+  border-radius:24px;
+  box-shadow:20px 20px 0 #f1d5e0;
 }
 
-.steps{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-
-.step{
-  background:white;
-  padding:24px;
-  border-radius:18px;
-  border:1px solid #eadde4;
-}
-
-.number{
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  background:var(--bordo);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:bold;
+.about h2{
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--bordo);
+  font-size:42px;
   margin-bottom:15px;
 }
 
-.final{
+.about h3{
+  font-size:24px;
+  margin-bottom:5px;
+}
+
+/* CONTACTO */
+
+.contact{
   text-align:center;
-  background:#f6f0f4;
+  background:#fff1f6;
 }
 
-footer{
-  background:#38232e;
-  color:white;
-  text-align:center;
-  padding:35px 20px;
-}
-
-footer a{
-  color:#f1cadb;
-  text-decoration:none;
-}
-
-.whatsapp{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  width:62px;
-  height:62px;
-  background:var(--verde);
-  color:white;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:29px;
-  text-decoration:none;
-  box-shadow:0 7px 25px rgba(0,0,0,.22);
-  z-index:200;
-}
-
-@media(max-width:850px){
-  nav{display:none}
-  h1{font-size:42px}
-  h2{font-size:31px}
-  .hero-grid,.about{grid-template-columns:1fr}
-  .hero-logo{max-width:280px}
-  .grid{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}
-  .semaforo{grid-template-columns:1fr}
-}
-
-@media(max-width:520px){
-  .container{padding:60px 18px}
-  h1{font-size:38px}
-  .steps{grid-template-columns:1fr}
-  .brand small{display:none}
-}
-
-/* NOTEBOOK DE PORTADA */
-  .hero-visual{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-}
-
-.laptop{
-  width:100%;
-  max-width:500px;
-  background:#71334f;
-  padding:12px 12px 18px;
-  border-radius:18px 18px 8px 8px;
-  box-shadow:0 25px 50px rgba(70,35,52,.22);
-}
-
-.laptop-screen{
-  background:#fffafc;
-  min-height:310px;
-  border-radius:10px;
-  padding:28px 24px;
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-}
-
-.laptop-logo{
-  width:145px;
-  max-height:145px;
-  object-fit:contain;
+.contact h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:44px;
+  color:var(--bordo);
   margin-bottom:12px;
 }
 
-.laptop-title{
-  color:#71334f;
-  font-size:22px;
-  font-weight:800;
+.contact p{
+  max-width:650px;
+  margin:0 auto 25px;
 }
 
-.laptop-subtitle{
-  color:#8a6577;
-  margin:5px 0 18px;
-  font-size:14px;
+/* FOOTER */
+
+footer{
+  background:#5c1835;
+  color:white;
+  padding:35px 0;
 }
 
-.laptop-services{
-  width:100%;
+.footer-grid{
   display:grid;
-  gap:7px;
-  color:#71334f;
-  font-size:14px;
+  grid-template-columns:1fr 1.3fr 1fr;
+  gap:30px;
+  align-items:center;
 }
 
-.laptop-base{
-  width:112%;
-  height:14px;
-  background:#c98aa6;
-  margin-left:-6%;
-  margin-bottom:-28px;
-  margin-top:12px;
-  border-radius:3px 3px 14px 14px;
+footer strong{
+  display:block;
+  font-size:18px;
 }
 
+footer small{
+  color:#f0d8e2;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25D366;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  box-shadow:0 8px 22px rgba(0,0,0,.22);
+  z-index:200;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  nav{
+    display:none;
+  }
+
+  .hero-grid,
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .hero-logo{
+    width:210px;
+  }
+
+  .hero-right{
+    margin-top:20px;
+  }
+
+  .service-icons{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .hero{
+    padding-top:35px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero-subtitle{
+    font-size:18px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .trust{
+    grid-template-columns:1fr;
+  }
+
+  .news-card{
+    min-width:85%;
+  }
+
+  .arrow{
+    display:none;
+  }
+
+  .section-title h2,
+  .about h2,
+  .contact h2{
+    font-size:34px;
+  }
+
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="nav">
-  <div class="brand">
-    <img src="logo-js-estudio.png" alt="JS Estudio Contable">
-    <div>
-     <strong style="font-size:22px;">JS Estudio Contable</strong>
-     <small>Janet Marysol Saldivia · Contadora Pública Nacional · MP N.º 931</small>
-    </div>
-  </div>
+  <div class="container nav">
 
-  <nav>
-    <a href="#soluciones">Soluciones</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#empresas">Empresas</a>
-    <a href="#colegas">Colegas</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</div>
+    <div class="brand">
+      <img src="logo-js-estudio.png" alt="JS Estudio Contable">
+      <span>JS Estudio Contable</span>
+    </div>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#empresas">Empresas</a>
+      <a href="#colegas">Colegas</a>
+      <a href="#novedades">Novedades</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+  </div>
 </header>
 
 
+<!-- PORTADA -->
 
-<section class="hero">
-  <div class="container hero-grid">
+<section class="hero" id="inicio">
 
-    <div>
-      <div class="eyebrow">CONTABILIDAD CLARA · ATENCIÓN PERSONALIZADA</div>
+<div class="container hero-grid">
 
-      <h1>
-        Tu contabilidad en orden.<br>
-        Tu negocio, más claro.
-      </h1>
+  <div class="hero-left">
 
-      <p class="lead">
-        Contadora Pública Nacional · Atención 100% online en Argentina.
-      </p>
+    <img src="logo-js-estudio.png"
+         class="hero-logo"
+         alt="JS Estudio Contable">
 
-      <p>
-        Acompaño a emprendedores, profesionales, comercios y empresas
-        en impuestos, contabilidad y organización fiscal.
-      </p>
-
-      <div class="buttons">
-        <a class="btn primary"
-           href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
-           target="_blank">
-          Quiero hacer una consulta
-        </a>
-
-        <a class="btn secondary" href="#soluciones">
-          Conocer servicios
-        </a>
-      </div>
-
-      <div class="trust">
-        Atención online · Honorarios claros · Seguimiento profesional
-      </div>
+    <div class="eyebrow">
+      Contabilidad clara · Atención personalizada
     </div>
-    <div class="hero-visual">
-  <div class="laptop">
-    <div class="laptop-screen">
-      <img src="logo-js-estudio.png" alt="JS Estudio Contable" class="laptop-logo">
 
-      <div class="laptop-title">JS ESTUDIO CONTABLE</div>
-      <div class="laptop-subtitle">CP Janet Marysol Saldivia</div>
-
-      <div class="laptop-services">
-        <span>Monotributo e impuestos</span>
-        <span>Facturación y regularizaciones</span>
-        <span>Empresas y PyMEs</span>
-        <span>Servicios para colegas</span>
-      </div>
-    </div>
-    <div class="laptop-base"></div>
-  </div>
-</div>
-
-
-</section>
-
-  <section id="soluciones" class="alt">
-<div class="container">
-
-<div class="section-title">
-  <span class="badge">Soluciones</span>
-  <h2>¿Qué te está pasando?</h2>
-  <p>No necesitás conocer el nombre del trámite. Empezamos por entender el problema.</p>
-</div>
-
-<div class="grid">
-
-<div class="card feature">
-  <div class="problem">“Tengo deuda y no sé de dónde salió”</div>
-  <h3>Rescate Fiscal</h3>
-  <p>Reviso períodos, obligaciones, presentaciones y deuda para determinar qué ocurrió y cuáles son los próximos pasos.</p>
-</div>
-
-<div class="card feature">
-  <div class="problem">“Quiero saber si está todo bien”</div>
-  <h3>Chequeo ARCA 360°</h3>
-  <p>Revisión preventiva de tu situación fiscal con un informe claro sobre lo correcto, lo que requiere atención y lo que debería regularizarse.</p>
-</div>
-
-<div class="card feature">
-  <div class="problem">“Quiero cambiar de contador”</div>
-  <h3>Cambio de Contador Seguro</h3>
-  <p>Revisión inicial de presentaciones, deuda, registraciones y documentación para conocer cómo se recibe tu situación.</p>
-</div>
-
-<div class="card feature">
-  <div class="problem">“Quiero otra opinión”</div>
-  <h3>Segunda Opinión Contable</h3>
-  <p>Análisis profesional independiente sobre una situación contable o impositiva concreta.</p>
-</div>
-
-<div class="card feature">
-  <div class="problem">“No sé cuánto gano realmente”</div>
-  <h3>Radiografía de tu Negocio</h3>
-  <p>Análisis de ventas, costos, gastos e impuestos para comprender mejor el resultado de tu actividad.</p>
-</div>
-
-<div class="card feature">
-  <div class="problem">“Tengo obligaciones atrasadas”</div>
-  <h3>Regularización</h3>
-  <p>Revisión de declaraciones juradas pendientes, deuda e inconsistencias para ordenar tu situación.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section id="servicios">
-<div class="container">
-
-<div class="section-title">
-  <span class="badge">Gestión habitual</span>
-  <h2>También puedo ocuparme del día a día</h2>
-</div>
-
-<div class="grid">
-
-<div class="card">
-<h3>Monotributo</h3>
-<p>Altas, bajas, modificaciones, recategorizaciones y seguimiento.</p>
-</div>
-
-<div class="card">
-<h3>Impuestos</h3>
-<p>IVA · Ganancias · Ingresos Brutos · Autónomos.</p>
-</div>
-
-<div class="card">
-<h3>Facturación electrónica</h3>
-<p>Configuración, puntos de venta y acompañamiento.</p>
-</div>
-
-<div class="card">
-<h3>Sueldos</h3>
-<p>Liquidaciones y obligaciones relacionadas.</p>
-</div>
-
-<div class="card">
-<h3>Sociedades</h3>
-<p>Constitución y acompañamiento contable e impositivo según cada caso.</p>
-</div>
-
-<div class="card">
-<h3>Regularizaciones</h3>
-<p>DDJJ pendientes, deuda e inconsistencias fiscales.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section id="empresas" class="dark">
-<div class="container">
-
-<div class="section-title">
-  <span class="badge">Para empresas</span>
-  <h2>Tu área contable, sin incorporarla a tu estructura</h2>
-</div>
-
-<div class="card">
-<h3>Back Office Contable</h3>
-
-<p>
-Apoyo remoto para PyMEs y empresas que necesitan organización administrativa y contable.
-</p>
-
-<p>
-Registraciones · Conciliaciones · Facturación · Cuentas corrientes ·
-Papeles de trabajo · Información para balances · Reportes
-</p>
-
-<a class="btn secondary"
-style="color:white;border-color:white"
-href="https://wa.me/5492966489653?text=Hola%20Janet,%20quisiera%20consultar%20por%20el%20servicio%20de%20Back%20Office%20Contable."
-target="_blank">
-Consultar servicio para empresas
-</a>
-
-</div>
-</div>
-</section>
-
-
-<section id="colegas" class="alt">
-<div class="container">
-
-<div class="section-title">
-<span class="badge">Para colegas</span>
-<h2>¿Sos contador/a y necesitás una mano?</h2>
-</div>
-
-<div class="card">
-<h3>CONTADORA ON DEMAND</h3>
-
-<p>
-Apoyo profesional remoto para estudios contables.
-Podés contratar colaboración por tarea, proyecto o períodos de mayor demanda,
-manteniendo vos la relación con tu cliente.
-</p>
-
-<p>
-IVA · IIBB · Registraciones · Conciliaciones · Controles ·
-Papeles de trabajo · Preparación de información.
-</p>
-
-<p><strong>Confidencialidad profesional.</strong></p>
-
-<a class="btn primary"
-href="https://wa.me/5492966489653?text=Hola%20Janet,%20quisiera%20consultar%20disponibilidad%20para%20Contadora%20On%20Demand."
-target="_blank">
-Consultar disponibilidad
-</a>
-
-</div>
-</div>
-</section>
-
-
-<section class="dark">
-<div class="container">
-
-<div class="section-title">
-<span class="badge">Servicio destacado</span>
-<h2>🔎 Chequeo ARCA 360°</h2>
-<p>¿Estás segura/o de que tu situación fiscal está en orden?</p>
-<p>No necesitás esperar una intimación para averiguarlo.</p>
-</div>
-
-<div class="semaforo">
-
-<div class="light-card">
-<h3>🟢 Correcto</h3>
-<p>Obligaciones verificadas sin observaciones relevantes.</p>
-</div>
-
-<div class="light-card">
-<h3>🟡 Atención</h3>
-<p>Hay cuestiones que conviene revisar.</p>
-</div>
-
-<div class="light-card">
-<h3>🔴 Acción</h3>
-<p>Se detectaron situaciones que requieren regularización.</p>
-</div>
-
-</div>
-
-<p style="text-align:center;margin-top:30px">
-<strong>Recibís un informe profesional + prioridades + próximos pasos.</strong><br>
-Podés contratar solamente el chequeo. No requiere abono mensual.
-</p>
-
-</div>
-</section>
-
-
-<section>
-<div class="container">
-
-<div class="section-title">
-<span class="badge">Modalidades</span>
-<h2>Un servicio acorde a cada etapa</h2>
-</div>
-
-<div class="grid">
-
-<div class="card">
-<h3>Plan Monotributo</h3>
-<p>Para quienes quieren delegar el seguimiento habitual de sus obligaciones.</p>
-</div>
-
-<div class="card">
-<h3>Plan Emprendedor / PyME</h3>
-<p>Impuestos, vencimientos, seguimiento y reportes.</p>
-</div>
-
-<div class="card">
-<h3>Plan Empresa</h3>
-<p>Servicio personalizado según operaciones, necesidades y volumen de actividad.</p>
-</div>
-
-</div>
-
-<div style="text-align:center;margin-top:30px">
-<a class="btn primary"
-href="https://wa.me/5492966489653?text=Hola%20Janet,%20quisiera%20solicitar%20una%20propuesta%20de%20servicios."
-target="_blank">
-Solicitar propuesta
-</a>
-</div>
-
-</div>
-</section>
-
-
-<section id="sobre-mi" class="alt">
-<div class="container about">
-
-<div>
-<img src="janet-saldivia.jpg" alt="Janet Marysol Saldivia - Contadora Pública">
-</div>
-
-<div>
-<span class="badge">Detrás del estudio</span>
-
-<h2>Janet Marysol Saldivia</h2>
-
-<h3>Contadora Pública Nacional</h3>
-
-<p>
-Matriculada en el Consejo Profesional de Ciencias Económicas de Santa Cruz · MP N.º 931.
-</p>
-
-<p>
-Mi objetivo es que entiendas tu situación contable e impositiva sin convertir cada consulta
-en una conversación llena de tecnicismos.
-</p>
-
-<p>
-Trabajo de manera online con clientes de cualquier lugar de Argentina,
-combinando herramientas digitales con atención personalizada.
-</p>
-
-<p><strong>El Calafate · Santa Cruz</strong></p>
-
-</div>
-</div>
-</section>
-
-
-<section>
-<div class="container">
-
-<div class="section-title">
-<span class="badge">Simple y seguro</span>
-<h2>Cómo trabajamos</h2>
-</div>
-
-<div class="steps">
-
-<div class="step">
-<div class="number">1</div>
-<h3>Me contás tu situación</h3>
-<p>Una descripción breve para entender qué necesitás.</p>
-</div>
-
-<div class="step">
-<div class="number">2</div>
-<h3>Definimos el servicio</h3>
-<p>Te explico alcance, documentación necesaria, honorarios y plazo.</p>
-</div>
-
-<div class="step">
-<div class="number">3</div>
-<h3>Autorización segura</h3>
-<p>Cuando sea necesario operar en sistemas fiscales, utilizamos las autorizaciones correspondientes. No necesitás compartir tu clave fiscal.</p>
-</div>
-
-<div class="step">
-<div class="number">4</div>
-<h3>Recibís el trabajo</h3>
-<p>Informe, presentación, regularización o seguimiento según el servicio contratado.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="faq" style="padding:70px 20px;background:#f8f1f5;">
-  <div class="container" style="max-width:850px;">
-    
-    <p class="eyebrow">ANTES DE EMPEZAR</p>
-    <h2>Preguntas frecuentes</h2>
-    <p class="lead">
-      Lo que más me consultan antes de comenzar. Si tu duda no está acá, escribime.
+    <h1>
+      Tu contabilidad<br>
+      en orden.<br>
+      <span>Tu negocio, más claro.</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Soluciones contables para un crecimiento sostenible.
+      Atención profesional 100% online en toda Argentina.
     </p>
 
-    <div style="margin-top:30px;">
 
-      <details style="padding:18px 0;border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer;font-weight:700;">¿Qué necesito para empezar?</summary>
-        <p>Tu CUIT, una breve descripción de tu situación y la documentación que te indique según el servicio.</p>
-      </details>
+    <div class="service-icons">
 
-      <details style="padding:18px 0;border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer;font-weight:700;">¿Tengo que darte mi clave fiscal?</summary>
-        <p>No. Cuando es necesario operar en ARCA se utilizan las autorizaciones correspondientes. Tu clave fiscal sigue siendo personal.</p>
-      </details>
+      <div class="service-item">
+        <div class="icon-circle">▤</div>
+        Monotributo<br>e impuestos
+      </div>
 
-      <details style="padding:18px 0;border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer;font-weight:700;">¿Puedo contratar solamente el Chequeo ARCA 360°?</summary>
-        <p>Sí. Es un servicio puntual y no requiere un abono mensual. Recibís el informe, las prioridades y los próximos pasos.</p>
-      </details>
+      <div class="service-item">
+        <div class="icon-circle">♙</div>
+        Contabilidad y<br>regularizaciones
+      </div>
 
-      <details style="padding:18px 0;border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer;font-weight:700;">¿Cuánto tarda el chequeo?</summary>
-        <p>El plazo depende de la situación y de la documentación a revisar. Antes de comenzar te informo el tiempo estimado de entrega.</p>
-      </details>
+      <div class="service-item">
+        <div class="icon-circle">▥</div>
+        Empresas<br>y PyMEs
+      </div>
 
-      <details style="padding:18px 0;border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer;font-weight:700;">¿Cómo son los honorarios?</summary>
-        <p>Antes de empezar te informo el alcance del servicio, la documentación necesaria, el plazo y los honorarios.</p>
-      </details>
+      <div class="service-item">
+        <div class="icon-circle">◇</div>
+        Servicios<br>para colegas
+      </div>
 
-      <details style="padding:18px 0;border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer;font-weight:700;">Quiero cambiar de contador, ¿cómo es el proceso?</summary>
-        <p>Comienzo con una revisión de presentaciones, deuda, registraciones y documentación para conocer cómo se recibe tu situación y coordinar el traspaso.</p>
-      </details>
-
-      <details style="padding:18px 0;border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer;font-weight:700;">¿Trabajás con clientes de otras provincias?</summary>
-        <p>Sí. La atención es 100% online para clientes de toda Argentina.</p>
-      </details>
-
-      <details style="padding:18px 0;border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer;font-weight:700;">¿Mi información es confidencial?</summary>
-        <p>Sí. La información y documentación recibida se trata de manera confidencial en el marco del ejercicio profesional.</p>
-      </details>
-
-      <details style="padding:18px 0;border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer;font-weight:700;">Soy contador/a, ¿sigo teniendo la relación con mi cliente?</summary>
-        <p>Sí. Vos mantenés el vínculo con tu cliente y yo colaboro de manera remota por tarea, proyecto o períodos de mayor demanda.</p>
-      </details>
+      <div class="service-item">
+        <div class="icon-circle">▱</div>
+        Atención<br>online
+      </div>
 
     </div>
 
-  </div>
-</section>
-<section id="faq" style="background:#f8eef2; padding:70px 20px;">
-  <div class="container" style="max-width:900px; margin:auto;">
 
-    <span class="badge">Preguntas frecuentes</span>
+    <div class="buttons">
 
-    <h2 style="margin-top:15px;">Antes de empezar, quizás tengas alguna de estas dudas</h2>
-
-    <p class="lead">
-      Estas son algunas de las consultas que recibo con mayor frecuencia.
-    </p>
-
-    <div style="margin-top:35px; border-top:2px solid #c98aa6;">
-
-      <details style="padding:18px 0; border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer; font-weight:700;">¿Qué necesito para empezar?</summary>
-        <p>Tu CUIT, una breve descripción de tu situación y la documentación que te indique según el servicio.</p>
-      </details>
-
-      <details style="padding:18px 0; border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer; font-weight:700;">¿Tengo que darte mi clave fiscal?</summary>
-        <p>No. Cuando sea necesario operar en ARCA se utilizan las autorizaciones correspondientes. Tu clave fiscal sigue siendo personal.</p>
-      </details>
-
-      <details style="padding:18px 0; border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer; font-weight:700;">¿Puedo contratar solamente el Chequeo ARCA 360°?</summary>
-        <p>Sí. Es un servicio puntual y no requiere contratar un abono mensual. Recibís un informe con las observaciones, prioridades y próximos pasos.</p>
-      </details>
-
-      <details style="padding:18px 0; border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer; font-weight:700;">¿Cómo son los honorarios?</summary>
-        <p>Antes de comenzar te informo el alcance del trabajo, la documentación necesaria, los honorarios y el plazo estimado.</p>
-      </details>
-
-      <details style="padding:18px 0; border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer; font-weight:700;">Quiero cambiar de contador, ¿cómo es el proceso?</summary>
-        <p>Primero realizo una revisión de presentaciones, deuda, registraciones y documentación para conocer cómo se recibe tu situación y coordinar el traspaso.</p>
-      </details>
-
-      <details style="padding:18px 0; border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer; font-weight:700;">¿Trabajás con clientes de otras provincias?</summary>
-        <p>Sí. La atención es 100% online y puedo trabajar con clientes de cualquier lugar de Argentina.</p>
-      </details>
-
-      <details style="padding:18px 0; border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer; font-weight:700;">¿Mi información es confidencial?</summary>
-        <p>Sí. La información y documentación recibida se trata de manera confidencial en el marco del ejercicio profesional.</p>
-      </details>
-
-      <details style="padding:18px 0; border-bottom:1px solid #d8c7d0;">
-        <summary style="cursor:pointer; font-weight:700;">Soy contador/a, ¿sigo teniendo la relación con mi cliente?</summary>
-        <p>Sí. Vos mantenés el vínculo con tu cliente y yo colaboro de manera remota por tarea, proyecto o períodos de mayor demanda.</p>
-      </details>
-
-    </div>
-
-    <p style="margin-top:30px;">
-      <strong>¿Te quedó otra duda?</strong>
-      <a href="https://wa.me/5492966489653?text=Hola%20Janet,%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
+      <a class="btn btn-primary"
+         href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
          target="_blank"
-         style="color:#71334f; font-weight:700;">
-        Escribime por WhatsApp
+         rel="noopener">
+         ☏ Quiero hacer una consulta
       </a>
-    </p>
+
+      <a class="btn btn-secondary" href="#servicios">
+        Conocé mis servicios →
+      </a>
+
+    </div>
+
+
+    <div class="trust">
+
+      <div>✓ Atención 100% online<br>en toda Argentina</div>
+
+      <div>✓ Honorarios claros<br>y sin sorpresas</div>
+
+      <div>✓ Seguimiento<br>profesional</div>
+
+    </div>
 
   </div>
-</section>
-  
-  <section id="contacto" class="final">
-<div class="container">
 
-<h2>No necesitás saber qué trámite pedir.</h2>
 
-<p class="lead" style="margin:auto">
-Contame qué te está pasando y vemos cuál es el servicio adecuado.
-</p>
+  <!-- NOTEBOOK DERECHA -->
 
-<div class="buttons" style="justify-content:center">
+  <div class="hero-right">
 
-<a class="btn primary"
-href="https://wa.me/5492966489653?text=Hola%20Janet,%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
-target="_blank">
-Hablar con Janet por WhatsApp
-</a>
+    <div class="phrase">
+      Tu proyecto<br>también cuenta ♡
+    </div>
+
+    <div class="desk">
+
+      <div class="laptop">
+
+        <div class="screen">
+
+          <img src="logo-js-estudio.png"
+               alt="JS Estudio Contable">
+
+          <h3>
+            Tu contabilidad<br>
+            en orden.<br>
+            <span>Tu negocio, más claro.</span>
+          </h3>
+
+          <p>
+            Soluciones contables para un crecimiento sostenible.
+          </p>
+
+          <span class="screen-button">
+            CONTACTAME
+          </span>
+
+        </div>
+
+        <div class="laptop-base"></div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </div>
+</section>
 
-<p style="margin-top:30px">
-<strong>El Calafate · Santa Cruz · Atención online en toda Argentina</strong>
-</p>
+
+<!-- NOVEDADES -->
+
+<section class="novedades" id="novedades">
+
+<div class="container">
+
+  <div class="news-head">
+
+    <div class="section-title" style="margin:0">
+      <small>Actualidad contable</small>
+      <h2>Novedades</h2>
+      <p>
+        Información clara y actualizada para que tomes mejores decisiones.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="carousel-wrap">
+
+    <button class="arrow prev"
+            onclick="moveNews(-1)"
+            aria-label="Novedad anterior">‹</button>
+
+    <div class="carousel" id="newsCarousel">
+
+
+      <article class="news-card">
+
+        <div class="news-image">ARCA</div>
+
+        <div class="news-content">
+
+          <span class="news-date">
+            SEPTIEMBRE 2026
+          </span>
+
+          <h3>
+            Ganancias: novedades y vencimientos
+          </h3>
+
+          <p>
+            Información importante sobre presentaciones,
+            obligaciones y fechas a tener en cuenta.
+          </p>
+
+          <span class="read">
+            Leer más →
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <article class="news-card">
+
+        <div class="news-image">📅</div>
+
+        <div class="news-content">
+
+          <span class="news-date">
+            SEPTIEMBRE 2026
+          </span>
+
+          <h3>
+            Agenda de vencimientos
+          </h3>
+
+          <p>
+            IVA, F.931, Monotributo, Autónomos y
+            principales obligaciones del mes.
+          </p>
+
+          <span class="read">
+            Leer más →
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <article class="news-card">
+
+        <div class="news-image">ARCA</div>
+
+        <div class="news-content">
+
+          <span class="news-date">
+            ACTUALIDAD
+          </span>
+
+          <h3>
+            Recategorización de Monotributo
+          </h3>
+
+          <p>
+            Qué revisar y qué tener en cuenta para
+            mantener correctamente tu situación fiscal.
+          </p>
+
+          <span class="read">
+            Leer más →
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <article class="news-card">
+
+        <div class="news-image">▤</div>
+
+        <div class="news-content">
+
+          <span class="news-date">
+            INFORMACIÓN
+          </span>
+
+          <h3>
+            Facturación electrónica
+          </h3>
+
+          <p>
+            Recomendaciones para evitar errores
+            y mantener tu facturación ordenada.
+          </p>
+
+          <span class="read">
+            Leer más →
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <article class="news-card">
+
+        <div class="news-image">360°</div>
+
+        <div class="news-content">
+
+          <span class="news-date">
+            SERVICIOS
+          </span>
+
+          <h3>
+            Chequeo ARCA 360°
+          </h3>
+
+          <p>
+            Una revisión profesional para conocer
+            el estado de tu situación fiscal.
+          </p>
+
+          <span class="read">
+            Leer más →
+          </span>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <button class="arrow next"
+            onclick="moveNews(1)"
+            aria-label="Novedad siguiente">›</button>
+
+  </div>
+
+</div>
+</section>
+
+
+<!-- SERVICIOS -->
+
+<section id="servicios" class="alt">
+
+<div class="container">
+
+  <div class="section-title">
+    <small>Soluciones</small>
+    <h2>¿Qué te está pasando?</h2>
+    <p>
+      No necesitás conocer el nombre del trámite.
+      Empezamos por entender el problema.
+    </p>
+  </div>
+
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="problem">
+        “Tengo deuda y no sé de dónde salió”
+      </div>
+      <h3>Rescate Fiscal</h3>
+      <p>
+        Reviso períodos, obligaciones, presentaciones y deuda
+        para determinar qué ocurrió y cómo regularizarlo.
+      </p>
+    </div>
+
+
+    <div class="card">
+      <div class="problem">
+        “Quiero saber si está todo bien”
+      </div>
+      <h3>Chequeo ARCA 360°</h3>
+      <p>
+        Revisión preventiva de tu situación fiscal
+        con un informe claro y prioridades.
+      </p>
+    </div>
+
+
+    <div class="card">
+      <div class="problem">
+        “Quiero cambiar de contador”
+      </div>
+      <h3>Cambio de Contador Seguro</h3>
+      <p>
+        Revisión inicial de presentaciones, deuda,
+        registraciones y documentación.
+      </p>
+    </div>
+
+
+    <div class="card">
+      <div class="problem">
+        “Quiero otra opinión”
+      </div>
+      <h3>Segunda Opinión Contable</h3>
+      <p>
+        Análisis profesional independiente
+        sobre una situación concreta.
+      </p>
+    </div>
+
+
+    <div class="card">
+      <div class="problem">
+        “No sé cuánto gano realmente”
+      </div>
+      <h3>Radiografía de tu Negocio</h3>
+      <p>
+        Análisis de ventas, costos, gastos e impuestos
+        para comprender mejor el resultado de tu negocio.
+      </p>
+    </div>
+
+
+    <div class="card">
+      <div class="problem">
+        Gestión habitual
+      </div>
+      <h3>Servicios Contables</h3>
+      <p>
+        Monotributo, IVA, Ganancias, Ingresos Brutos,
+        Autónomos, facturación, sueldos y regularizaciones.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+<!-- EMPRESAS -->
+
+<section class="company" id="empresas">
+
+<div class="container">
+
+  <div class="section-title">
+    <small>Empresas y PyMEs</small>
+    <h2>
+      Tu área contable, sin incorporarla a tu estructura
+    </h2>
+    <p>
+      Una solución profesional y flexible para acompañar
+      la administración de tu empresa.
+    </p>
+  </div>
+
+  <div class="company-box">
+
+    <h3>Back Office Contable</h3>
+
+    <p>
+      Apoyo remoto para PyMEs y empresas que necesitan
+      organización administrativa-contable.
+    </p>
+
+    <div class="tags">
+      <span class="tag">Registraciones</span>
+      <span class="tag">Conciliaciones</span>
+      <span class="tag">Facturación</span>
+      <span class="tag">Cuentas corrientes</span>
+      <span class="tag">Papeles de trabajo</span>
+      <span class="tag">Información para balances</span>
+      <span class="tag">Reportes</span>
+    </div>
+
+    <a class="btn btn-secondary"
+       href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20quisiera%20consultar%20por%20el%20servicio%20de%20Back%20Office%20Contable."
+       target="_blank"
+       rel="noopener">
+       Consultar servicio para empresas
+    </a>
+
+  </div>
+
+</div>
+</section>
+
+
+<!-- COLEGAS -->
+
+<section class="colegas" id="colegas">
+
+<div class="container">
+
+  <div class="section-title">
+    <small>Servicios profesionales</small>
+    <h2>¿Sos contador/a y necesitás una mano?</h2>
+  </div>
+
+  <div class="card">
+
+    <h3>CONTADORA ON DEMAND</h3>
+
+    <p>
+      Apoyo profesional remoto para estudios contables.
+      Podés contratar colaboración por tarea, proyecto
+      o períodos de mayor demanda, manteniendo vos
+      la relación con tu cliente.
+    </p>
+
+    <div class="tags">
+      <span class="tag">IVA</span>
+      <span class="tag">IIBB</span>
+      <span class="tag">Registraciones</span>
+      <span class="tag">Conciliaciones</span>
+      <span class="tag">Controles</span>
+      <span class="tag">Papeles de trabajo</span>
+      <span class="tag">Preparación de información</span>
+    </div>
+
+    <p><strong>Confidencialidad profesional.</strong></p>
+
+    <br>
+
+    <a class="btn btn-primary"
+       href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20soy%20colega%20y%20quisiera%20consultar%20por%20Contadora%20On%20Demand."
+       target="_blank"
+       rel="noopener">
+       Quiero consultar disponibilidad
+    </a>
+
+  </div>
+
+</div>
+</section>
+
+
+<!-- SOBRE MI -->
+
+<section class="about" id="sobre-mi">
+
+<div class="container about-grid">
+
+  <div>
+    <img src="janet-saldivia.jpg"
+         class="about-photo"
+         alt="Janet Marysol Saldivia - Contadora Pública">
+  </div>
+
+  <div>
+
+    <div class="eyebrow">
+      Detrás del estudio
+    </div>
+
+    <h2>Janet Marysol Saldivia</h2>
+
+    <h3>Contadora Pública</h3>
+
+    <p>
+      Matriculada en el Consejo Profesional de Ciencias
+      Económicas de Santa Cruz.
+    </p>
+
+    <br>
+
+    <p>
+      Mi objetivo es que entiendas tu situación contable
+      e impositiva sin convertir cada consulta en una
+      conversación llena de tecnicismos.
+    </p>
+
+    <br>
+
+    <p>
+      Trabajo de manera online con clientes de cualquier
+      lugar de Argentina, combinando herramientas digitales
+      con atención personalizada.
+    </p>
+
+    <br>
+
+    <strong>El Calafate · Santa Cruz</strong>
+
+  </div>
+
+</div>
+</section>
+
+
+<!-- CONTACTO -->
+
+<section class="contact" id="contacto">
+
+<div class="container">
+
+  <h2>
+    No necesitás saber qué trámite pedir.
+  </h2>
+
+  <p>
+    Contame qué te está pasando y vemos cuál es
+    el servicio adecuado para tu situación.
+  </p>
+
+  <a class="btn btn-primary"
+     href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
+     target="_blank"
+     rel="noopener">
+     Hablar con Janet por WhatsApp
+  </a>
 
 </div>
 </section>
 
 
 <footer>
-<strong>JS Estudio Contable</strong><br>
-Janet Marysol Saldivia · Contadora Pública Nacional<br>
-El Calafate · Santa Cruz<br><br>
-  <div style="margin:10px 0 16px;">
-<a href="https://www.instagram.com/janetsaldivia.contadora/" target="_blank" rel="noopener noreferrer">📷 Instagram</a>
-&nbsp;&nbsp;·&nbsp;&nbsp;
-<a href="https://www.facebook.com/share/1Ewiso1hzb/" target="_blank" rel="noopener noreferrer">ⓕ Facebook</a>
-&nbsp;&nbsp;·&nbsp;&nbsp;
-<a href="https://www.linkedin.com/in/janet-saldivia-18b073351" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
+
+<div class="container footer-grid">
+
+  <div>
+    <strong>Atención 100% online</strong>
+    <small>El Calafate · Santa Cruz · Toda Argentina</small>
+  </div>
+
+  <div>
+    <strong>Janet Marysol Saldivia</strong>
+    <small>
+      Contadora Pública · CPCE Santa Cruz
+    </small>
+  </div>
+
+  <div>
+    <strong>JS Estudio Contable</strong>
+    <small>
+      Contabilidad clara · Atención personalizada
+    </small>
+  </div>
+
 </div>
-© 2026 JS Estudio Contable
+
 </footer>
 
 
 <a class="whatsapp"
-href="https://wa.me/5492966489653?text=Hola%20Janet,%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
-target="_blank"
-aria-label="Contactar por WhatsApp">
-<svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true"><path fill="white" d="M16 3C8.8 3 3 8.6 3 15.5c0 2.4.7 4.7 2 6.7L3.5 29l7-1.8c1.7.9 3.6 1.3 5.5 1.3 7.2 0 13-5.6 13-12.5S23.2 3 16 3zm0 23.3c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.1 1.1.9-4-.3-.4c-1.2-1.7-1.8-3.7-1.8-5.9 0-5.7 4.8-10.3 10.7-10.3s10.7 4.6 10.7 10.3S21.9 26.3 16 26.3zm5.9-7.7c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.7.1-1.9-.9-3.2-1.7-4.5-3.8-.3-.6.3-.6.9-1.9.1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.3 3.4 1.5 3.6c.2.2 2.5 3.8 6 5.3 2.2.9 3 .9 4.1.8 1.3-.2 1.9-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.6-.4z"/></svg>
+   href="https://wa.me/5492966489653?text=Hola%20Janet%2C%20vi%20tu%20p%C3%A1gina%20de%20JS%20Estudio%20Contable%20y%20quisiera%20realizar%20una%20consulta."
+   target="_blank"
+   rel="noopener"
+   aria-label="Consultar por WhatsApp">
+   ☏
 </a>
+
+
+<script>
+
+function moveNews(direction){
+
+  const carousel =
+    document.getElementById("newsCarousel");
+
+  carousel.scrollBy({
+    left:direction * 330,
+    behavior:"smooth"
+  });
+
+}
+
+/* movimiento automático de novedades */
+
+setInterval(function(){
+
+  const carousel =
+    document.getElementById("newsCarousel");
+
+  if(
+    carousel.scrollLeft +
+    carousel.clientWidth >=
+    carousel.scrollWidth - 20
+  ){
+    carousel.scrollTo({
+      left:0,
+      behavior:"smooth"
+    });
+  }else{
+    carousel.scrollBy({
+      left:330,
+      behavior:"smooth"
+    });
+  }
+
+},5000);
+
+</script>
 
 </body>
 </html>
-
